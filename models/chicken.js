@@ -1,7 +1,11 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Chicken extends Model{}
+class Chicken extends Model{
+    createOffSet(){
+        // code to make offset
+    }
+}
 
 Chicken.init(
     {
@@ -19,12 +23,21 @@ Chicken.init(
                 min: 1,
             },
         },
-        coop_id:{
-            // ???
-        },
         farmer_id:{
-            // ??
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references:{
+                model: 'Farmer',
+                key: 'id'
+            }
         }
+    },
+    {
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'Chicken',
     }
 );
 module.exports = { Chicken }

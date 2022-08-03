@@ -5,7 +5,10 @@ const sequelize = require('../config/connection');
 class Farmer extends Model {
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
-  }
+  };
+  createOffSet(){
+    // code to make offset
+}
 }
 // farmer is each player 
 Farmer.init(
@@ -19,14 +22,6 @@ Farmer.init(
     name: {
       type: DataTypes.STRING,
       allowNull: false,
-    },
-    email: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true,
-      validate: {
-        isEmail: true,
-      },
     },
     password: {
       type: DataTypes.STRING,
@@ -47,8 +42,8 @@ Farmer.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'user',
+    modelName: 'Farmer',
   }
 );
 
-module.exports = User;
+module.exports = { Farmer };

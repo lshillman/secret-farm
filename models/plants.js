@@ -1,7 +1,11 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class plantBed extends Model{}
+class plantBed extends Model{
+    createOffSet(){
+        // code to make offset
+    }
+}
 
 plantBed.init(
     {
@@ -16,6 +20,13 @@ plantBed.init(
             type: DataTypes.INTEGER,
             allowNull: false,
         },
+    },
+    {
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'plantBed',
     }
 );
 module.exports = { plantBed }
