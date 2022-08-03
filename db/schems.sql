@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS secretFarm_db;
+CREATE DATABASE secretFarm_db;

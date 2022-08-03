@@ -1,0 +1,24 @@
+{
+  "name": "secret-farm",
+  "version": "1.0.0",
+  "description": "Keep the plants safe",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lshillman/secret-farm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lshillman/secret-farm/issues"
+  },
+  "homepage": "https://github.com/lshillman/secret-farm#readme",
+  "dependencies": {
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.21.3"
+  }
+}
