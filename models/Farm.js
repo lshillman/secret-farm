@@ -3,7 +3,7 @@ const sequelize = require("../config/connection");
 
 class Farm extends Model {}
 
-Animal.init(
+Farm.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -12,11 +12,11 @@ Animal.init(
       autoIncrement: true,
     },
     name: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     description: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
       allowNull: false,
     },
   },
@@ -25,7 +25,7 @@ Animal.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "farm",
+    modelName: "Farm",
   }
 );
 module.exports = { Farm };
