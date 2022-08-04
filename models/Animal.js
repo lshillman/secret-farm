@@ -41,4 +41,4 @@ Animal.init(
   }
 );
 
-module.exports = { Animal };
+module.exports = Animal;
