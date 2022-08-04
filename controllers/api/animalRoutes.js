@@ -17,7 +17,6 @@ router.get('/', async (req, res) => {
 });
 
 // get one animal
-
 router.get('/:id', async (req, res) => {
     try {
         const dbAnimalData = await Animal.findByPk(req.params.id);
@@ -32,8 +31,49 @@ router.get('/:id', async (req, res) => {
 });
 
 // post an animal
+router.post('/', async (req, res) => {
+    try {
+      const dbAnimalData = await Animal.create({
+        type: req.body.type,
+        name: req.body.name,
+        breed: req.body.breed,
+        farm_id: req.body.farm_id,
+        food_organic: req.body.food_organic,
+        food_manufactured: req.body.food_manufactured
+      });  
+        res.status(200).json(dbAnimalData);
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+});
+
+
 
 // update an animal
+router.put('/:id', async (req, res) => {
+    try {
+      const dbAnimalData = await Animal.update(
+        {
+            type: req.body.type,
+            name: req.body.name,
+            breed: req.body.breed,
+            farm_id: req.body.farm_id,
+            food_organic: req.body.food_organic,
+            food_manufactured: req.body.food_manufactured
+        },
+        {
+            where: {
+                id: req.params.id
+            }
+        }
+        );  
+        res.status(200).json(dbAnimalData);
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+});
 
 // delete an animal
 
