@@ -28,6 +28,28 @@ a {
   padding: 0 20px;
 }
 
+main {
+  display: flex;
+  flex-direction: row;
+}
+
+aside {
+  display: flex;
+  flex-flow: column wrap;
+  width: fit-content;
+  margin-top: 30px;
+  border: 5px black solid;
+  border-radius: 10px;
+
+}
+
+.gallery {
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 30px;
+  margin-left: 15px;
+}
+
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
