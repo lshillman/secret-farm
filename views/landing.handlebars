@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="modalStyles.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Farm Budget Planner</title>
+</head>
+<body>
+    <header>
+        <h1>The Secret Farm Budget Planner!</h1>
+    </header>
+    <nav>
+        <a href="">Nav Link</a>
+        <a href="">Nav Link</a>
+        <button id="logBtn">Login</button>
+        <button id="signBtn">Signup</button>
+
+    </nav>
+
+    <div id="logModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <h1>Enter username and password</h1>
+            <span class="close">&times;</span>
+            <form action=""></form>
+                <label for="username">Username:</label><br>
+                <input type="text" id="logUser" name="username"><br>
+                <label for="password">Password:</label><br>
+                <input type="password" id="logPass" name="password"><br><br>
+                <input type="submit" value="Submit">
+            </form> 
+        </div>
+      
+      </div>
+      <div id="signModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <h1>Sign Up!</h1>
+            <span class="close">&times;</span>
+            <form action=""></form>
+                <label for="email">Username:</label><br>
+                <input type="text" id="email" name="email"><br>
+                <label for="username">Username:</label><br>
+                <input type="text" id="signUser" name="username"><br>
+                <label for="password">Password:</label><br>
+                <input type="password" id="signPass" name="password"><br><br>
+                <input type="submit" value="Submit">
+            </form> 
+        </div>
+      
+      </div>
+    <script>
+        var signModal = document.getElementById("logModal");
+
+        var signBtn = document.getElementById("logBtn");
+
+        var span = document.getElementsByClassName("close")[0];
+
+        signBtn.onclick = function() {
+            logModal.style.display = "block";
+        }
+
+        span.onclick = function() {
+            logModal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+        if (event.target == logModal) {
+            logModal.style.display = "none";
+        }
+        }
+        var signModal = document.getElementById("signModal");
+
+        var signBtn = document.getElementById("signModal");
+
+        var span = document.getElementsByClassName("close")[0];
+
+        signBtn.onclick = function() {
+            signModal.style.display = "block";
+        }
+
+        span.onclick = function() {
+            signModal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+        if (event.target == logModal) {
+            signModal.style.display = "none";
+        }
+        }
+
+
+        
+    </script>
+</body>
+</html>
