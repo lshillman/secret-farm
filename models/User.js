@@ -7,7 +7,7 @@ class User extends Model {
     return bcrypt.compareSync(loginPw, this.password);
   }
 }
-// farmer is each player
+
 User.init(
   {
     id: {
@@ -47,8 +47,8 @@ User.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "user",
+    modelName: "User",
   }
 );
 
-module.exports = User;
+module.exports = { User };
