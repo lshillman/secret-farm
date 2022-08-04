@@ -7,9 +7,11 @@
     <title>Farm Budget Planner</title>
 </head>
 <body>
+
   <header>
     <h1>Farm Budget Planner!</h1>
   </header>
+
   <nav>
     <a href="/">Home</a>
     {{#if loggedIn}}
@@ -18,13 +20,16 @@
     <a href="/login">Login</a>
     {{/if}}
   </nav>
+
   <main>
     <aside>
-      <button id="addFarmBtn">Add New Farm</button>
+        <button id="addFarmBtn">Add New Farm</button>
     </aside>
+
     <div class="gallery">
-      {{{body}}}
+        {{{body}}}
     </div>
+
   </main>
   {{#if loggedIn}}
   <script src="/js/logout.js"></script>
