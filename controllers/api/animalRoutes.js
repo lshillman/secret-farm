@@ -76,5 +76,20 @@ router.put('/:id', async (req, res) => {
 });
 
 // delete an animal
+router.delete('/:id', async (req, res) => {
+    try {
+      const dbAnimalData = await Animal.destroy(
+        {
+            where: {
+                id: req.params.id
+            }
+        }
+        );  
+        res.status(200).json(dbAnimalData);
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+});
 
 module.exports = router;
