@@ -15,6 +15,14 @@ Animal.init(
       type: DataTypes.STRING,
       allowNull: false
     },
+    name: {
+      type: DataTypes.STRING,
+      defaultValue: "not given"
+    },
+    breed: {
+      type: DataTypes.STRING,
+      defaultValue: "not given"
+    },
     farm_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
