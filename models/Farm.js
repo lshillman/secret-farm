@@ -16,7 +16,7 @@ Farm.init(
       allowNull: false,
     },
     description: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
     },
     user_id: {
@@ -33,7 +33,7 @@ Farm.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "Farm",
+    modelName: "farm",
   }
 );
 module.exports = Farm;

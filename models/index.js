@@ -11,14 +11,14 @@ Farm.belongsTo(User, {
     foreignKey: 'user_id',
 });
 
-Farm.hasMany(Animal, {
-    foreignKey: 'farm_id',
-    onDelete: 'CASCADE'
-});
+// Farm.hasMany(Animal, {
+//     foreignKey: 'farm_id',
+//     onDelete: 'CASCADE'
+// });
 
-Animal.belongsTo(Farm, {
-    foreignKey: 'farm_id'
-});
+// Animal.belongsTo(Farm, {
+//     foreignKey: 'farm_id'
+// });
 
 
 
