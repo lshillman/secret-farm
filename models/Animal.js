@@ -11,16 +11,20 @@ Animal.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    type: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     farm_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
     food_organic: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.DECIMAL(6,2),
       allowNull: false,
     },
     food_manufactured: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.DECIMAL(6,2),
       allowNull: false,
     },
   },
@@ -32,4 +36,5 @@ Animal.init(
     modelName: "animal",
   }
 );
+
 module.exports = { Animal };
