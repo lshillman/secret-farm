@@ -12,11 +12,11 @@ Farm.init(
       autoIncrement: true,
     },
     name: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     description: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
       allowNull: false,
     },
   },
@@ -25,7 +25,7 @@ Farm.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "farm",
+    modelName: "Farm",
   }
 );
 module.exports = { Farm };

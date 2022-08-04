@@ -14,17 +14,17 @@ Animal.init(
     type: {
       type: DataTypes.STRING,
       allowNull: false
-    }
+    },
     farm_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
     food_organic: {
-      type: DataTypes.DECIMAL[6,2],
+      type: DataTypes.DECIMAL(6,2),
       allowNull: false,
     },
     food_manufactured: {
-      type: DataTypes.DECIMAL[6,2],
+      type: DataTypes.DECIMAL(6,2),
       allowNull: false,
     },
   },
@@ -36,4 +36,5 @@ Animal.init(
     modelName: "animal",
   }
 );
+
 module.exports = { Animal };
