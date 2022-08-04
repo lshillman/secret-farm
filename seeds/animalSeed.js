@@ -33,8 +33,6 @@ const animalData = [
     },
 ];
 
-const animalSeeds = () => Animal.bulkCreate(animalData, {
-    individualHooks: true
-});
+const animalSeeds = () => Animal.bulkCreate(animalData);
 
-module.exports = ( animalSeeds );
+module.exports =  animalSeeds ;
