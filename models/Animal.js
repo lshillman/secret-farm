@@ -27,7 +27,7 @@ Animal.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: 'Farm',
+        model: 'farm',
         key: 'id'
       }
     },
