@@ -30,7 +30,7 @@ router.get('/:id', async (req, res) => {
     }
 });
 
-// post an animal
+// create an animal
 router.post('/', async (req, res) => {
     try {
       const dbAnimalData = await Animal.create({
