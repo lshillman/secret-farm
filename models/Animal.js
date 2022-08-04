@@ -15,9 +15,21 @@ Animal.init(
       type: DataTypes.STRING,
       allowNull: false
     },
+    name: {
+      type: DataTypes.STRING,
+      defaultValue: "not given"
+    },
+    breed: {
+      type: DataTypes.STRING,
+      defaultValue: "not given"
+    },
     farm_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      references: {
+        model: 'Farm',
+        key: 'id'
+      }
     },
     food_organic: {
       type: DataTypes.DECIMAL(6,2),
@@ -37,4 +49,4 @@ Animal.init(
   }
 );
 
-module.exports = { Animal };
+module.exports = Animal;
