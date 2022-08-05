@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Animal, Farm, User } = require('../models');
+const { Farm, User } = require('../models');
 
 router.get('/', async (req,res) => {
     try{
@@ -7,9 +7,9 @@ router.get('/', async (req,res) => {
             include: User,
             attributes: {exclude: ['password']}    
         });
-        const Farm = Animal.map((post) =>post.get({plain: true}));
+        const Farms = posts.map((post) =>post.get({plain: true}));
         res.render('homepage',{
-            Farm,
+            Farms,
             loggedIn: req.session.loggedIn
         });
     }catch(err){
