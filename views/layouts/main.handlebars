@@ -13,6 +13,12 @@
     <h1>Farm Budget Planner!</h1>
   </header>
 
+  <main>
+    <div>
+        {{{body}}}
+    </div>
+  </main>
+
   <nav>
     <a href="/">Home</a>
     {{#if loggedIn}}
@@ -29,9 +35,8 @@
         <button id="addFarmBtn">Add New Farm</button>
     </aside>
 {{/if}}
-    <div class="gallery">
-        {{{body}}}
-    </div>
+
+    
 
   </main>
   {{#if loggedIn}}
