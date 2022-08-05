@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const {User, Farm} = require('../../models');
+const {User, Farm, Animal} = require('../../models');
 
 // Get all users------------------------------------------------------
 router.get('/', async(req,res) => {
@@ -90,6 +90,21 @@ router.post('/logout', (req,res) =>{
         });
     }else{
         res.status(404).end();
+    }
+});
+router.get('/:id/farms', async(req,res) => {
+    try{
+        const allUser = await User.findByPk(
+            req.params.id,
+            {
+                include: {model: Farm, include:{model:Animal}},
+                attributes: {exclude: 'password'},
+            },
+            
+        );
+        res.status(200).json(allUser);
+    }catch(err){
+        res.status(500).json(err)
     }
 });
 
