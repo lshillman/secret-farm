@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/skeleton.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>OnlyFarms</title>
+</head>
+<body>
+
+  <header>
+
+        <div id="headerContainer">
+            <a href="/" id="siteHomeLink"><img src="./assets/onlyfarms-logo.svg" id="sitelogo"></a>
+            <nav>
+                <a href="/login">Sign up</a>
+                <!-- {{#if loggedIn}} -->
+                <!-- <button id="logout">Logout</button> -->
+                <!-- {{else}} -->
+                <a href="/login">Login</a>
+                <!-- {{/if}} -->
+            </nav>
+        </div>
+
+  </header>
+
+  <main>
+    <!-- <aside>
+        <button id="addFarmBtn">Add New Farm</button>
+    </aside> -->
+
+    <section class="section hero">
+        <div class="container">
+            <h2>Your farm budget, simplified</h2>
+        </div>
+    </section>
+
+    <section class="section orange">
+        <div class="container">
+            <div class="six columns">
+                <img src="./assets/sheep.png" class="sectionImage" alt="image of a sheep staring cheekily into the camera">
+            </div>
+            <div class="six columns landing">
+                    <h3>What's in it for me?</h3>
+                    <p>OnlyFarms is your one stop shop for agricultural financial planning. Model your farm using our state-of-the-art software, and get a week-by-week budget tailored to your exacting needs.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section green">
+        <div class="container">
+            <div class="six columns landing">
+                <h3>Is it legit?</h3>
+                <p>OnlyFarms was coded from scratch by real full-stack developers-in-training, who mostly know how to use bcrypt. You can trust OnlyFarms with your farm data. We think.</p>
+            </div>
+            <div class="six columns">
+                <img src="./assets/donkey.png" class="sectionImage" alt="image of a donkey smiling toothily">
+            </div>
+        </div>
+    </section>
+
+    <section class="section blue">
+        <div class="container">
+            <div class="six columns">
+                <img src="./assets/cookies.png" class="sectionImage" alt="image of chocolate chip cookies">
+            </div>
+            <div class="six columns landing">
+                    <h3>Are there cookies?</h3>
+                    <p>You bet. But they're for functional purposes only. OnlyFarms is not tracking you at this time, and we'll be sure to let you know if that changes. By using OnlyFarms you agree to allow functional cookies.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- <div class="gallery">
+        {{{body}}}
+    </div> -->
+
+  </main>
+  <!-- {{#if loggedIn}} -->
+  <!-- <script src="/js/logout.js"></script> -->
+  <!-- {{/if}} -->
+</body>
+
+</html>
