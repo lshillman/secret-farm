@@ -1,15 +1,75 @@
-* {
-  font-family: 'Times New Roman', Times, serif;
+:root {
+  --header: #517F0A;
 }
+
 body {
   background-color: darkgrey;
 }
 
 header {
-  text-align: center;
   color: white;
-  background-color: olivedrab;
-  padding-top: 10px;
+  background-color: var(--header);
+  text-align: center;
+  height: 70px;
+}
+
+#headerContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* #sitelogo {
+  display:inline-block;
+} */
+
+#siteHomeLink {
+  height: 100%;
+  min-width: 300px;
+}
+
+@media (max-width: 530px) {
+  #siteHomeLink {
+    min-width:auto;
+    width: 150px;
+    margin-top:1.5rem;
+    }
+
+    nav {
+      font-size: 1rem;
+    }
+}
+
+.hero {
+  background-image: url('../assets/farm_bg.png');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  padding: 4rem 0 10rem 0;
+}
+
+.sectionImage {
+  max-width: 70%;
+  margin: 0 auto -8px auto;
+}
+
+.orange {
+  background-color: #ffe8c2;
+}
+
+.green {
+  background-color: #f6fdec;
+}
+
+.blue {
+  background-color: #ecf3fd;
+}
+
+.landing {
+  padding: 2rem;
 }
 
 h1 {
@@ -18,20 +78,22 @@ h1 {
 }
 
 nav {
-  font-size: 25px;
+  font-size: 2rem;
   text-align: right;
+}
+
+nav a {
+  line-height: 70px;
+  margin-left: 2rem;
   color: white;
-  background-color: olivedrab;
+  text-decoration: none;
 }
 
-a {
-  padding: 0 20px;
+nav a:hover {
+  color: white;
 }
 
-main {
-  display: flex;
-  flex-direction: row;
-}
+
 
 aside {
   display: flex;
