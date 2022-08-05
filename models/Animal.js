@@ -13,31 +13,35 @@ Animal.init(
     },
     type: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
     },
     name: {
       type: DataTypes.STRING,
-      defaultValue: "not given"
+      defaultValue: "not given",
     },
     breed: {
       type: DataTypes.STRING,
-      defaultValue: "not given"
+      defaultValue: "not given",
     },
     farm_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: 'farm',
-        key: 'id'
-      }
+        model: "farm",
+        key: "id",
+      },
     },
     food_organic: {
-      type: DataTypes.DECIMAL(6,2),
+      type: DataTypes.DECIMAL(6, 2),
       allowNull: false,
     },
     food_manufactured: {
-      type: DataTypes.DECIMAL(6,2),
+      type: DataTypes.DECIMAL(6, 2),
       allowNull: false,
+    },
+    output: {
+      type: DataTypes.STRING,
+      allowNull: true,
     },
   },
   {
