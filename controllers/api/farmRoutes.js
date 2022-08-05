@@ -37,7 +37,7 @@ router.post('/', async (req, res) => {
       const dbFarmData = await Farm.create({
         name: req.body.name,
         description: req.body.description,
-        user_id: req.body.user_id,
+        user_id: req.session.userId,
       });  
         res.status(200).json(dbFarmData);
     } catch (err) {
@@ -46,7 +46,7 @@ router.post('/', async (req, res) => {
     }
 });
 
-// update a farm
+// update a farm TODO: add withAuth function
 router.put('/:id', async (req, res) => {
     try {
       const dbFarmData = await Farm.update(
@@ -68,7 +68,7 @@ router.put('/:id', async (req, res) => {
 });
 
 
-// delete a farm
+// delete a farm TODO add withAuth
 router.delete('/:id', async (req, res) => {
     try {
       const dbFarmData = await Farm.destroy(
