@@ -42,7 +42,7 @@ router.post('/', async (req,res) => {
         req.session.save(() =>{
             req.session.logged_in = true,
             req.session.name = cleanedUser.name,
-            req.session.id = cleanedUser.id,
+            req.session.userId = cleanedUser.id,
             res.status(200).json(newUser);
         });
     }catch(err){
@@ -75,7 +75,7 @@ router.post('/login', async (req,res) => {
         req.session.save(() =>{
             req.session.logged_in = true,
             req.session.name = cleanedUser.name,
-            req.session.id = cleanedUser.id,
+            req.session.userId = cleanedUser.id,
             res.status(200).json(userData);
         });
     }catch(err){
