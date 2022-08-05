@@ -22,11 +22,13 @@
     {{/if}}
   </nav>
 
+
+{{#if loggedIn}}
   <main>
     <aside>
         <button id="addFarmBtn">Add New Farm</button>
     </aside>
-
+{{/if}}
     <div class="gallery">
         {{{body}}}
     </div>
