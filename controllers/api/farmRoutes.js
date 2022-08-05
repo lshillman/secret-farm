@@ -84,5 +84,21 @@ router.delete('/:id', async (req, res) => {
       res.status(500).json(err);
     }
 });
+// farm and animals ---------------------------------------------
+router.get('/:id/animal', async (req, res) => {
+    try {
+        const dbFarmData = await Farm.findByPk(req.params.id,{
+            include: {model: Animal}
+        });
+        if (!dbFarmData) {
+            res.status(404).json({message: "No farm with that id"});
+            return;
+        }
+        res.status(200).json(dbFarmData);
+    } catch(err) {
+        res.status(500).json(err);
+    }
+});
+
 
 module.exports = router;

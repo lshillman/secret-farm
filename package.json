@@ -20,6 +20,7 @@
   "homepage": "https://github.com/lshillman/secret-farm#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "chart.js": "^3.9.1",
     "connect-session-sequelize": "^7.1.4",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
@@ -29,6 +30,5 @@
     "path": "^0.12.7",
     "sequelize": "^6.21.3"
   },
-  "devDependencies": {},
   "keywords": []
 }
