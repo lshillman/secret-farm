@@ -1,18 +1,29 @@
 const router = require('express').Router();
-const { Farm, User } = require('../models');
+const { Animal, Farm, User } = require('../models');
 
 router.get('/', async (req,res) => {
     try{
         const posts = await Farm.findAll({
-            include: User,
-            attributes: {exclude: ['password']}    
+            include:
+        [
+            {
+            model: User,
+            attributes: ["name"]
+            },
+            {
+            model: Animal,
+            attributes: ["output"]
+            }
+        ],
         });
-        const Farms = posts.map((post) =>post.get({plain: true}));
+        const Farm = posts.map((post) =>post.get({plain: true}));
         res.render('homepage',{
-            Farms,
+            Farm,
             loggedIn: req.session.loggedIn
         });
     }catch(err){
         res.status(500).json(err);
     }
 });
+
+module.exports = router;
