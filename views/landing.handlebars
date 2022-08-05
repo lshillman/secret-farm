@@ -21,27 +21,26 @@
     </nav>
 
     <div id="logModal" class="modal">
-
         <!-- Modal content -->
         <div class="modal-content">
             <h1>Enter username and password</h1>
-            <span class="close">&times;</span>
+            <span class="close" id="logClose">&times;</span>
             <form action=""></form>
                 <label for="username">Username:</label><br>
                 <input type="text" id="logUser" name="username"><br>
                 <label for="password">Password:</label><br>
                 <input type="password" id="logPass" name="password"><br><br>
-                <input type="submit" value="Submit">
+                <input type="submit" value="Submit" id="logSubmit" >
             </form> 
         </div>
-      
-      </div>
-      <div id="signModal" class="modal">
 
+      </div>
+
+      <div id="signModal" class="modal">
         <!-- Modal content -->
-        <div class="modal-content">
+        <div class="modal-content" id="signModal">
             <h1>Sign Up!</h1>
-            <span class="close">&times;</span>
+            <span class="close" id="signClose">&times;</span>
             <form action=""></form>
                 <label for="email">Username:</label><br>
                 <input type="text" id="email" name="email"><br>
@@ -49,53 +48,11 @@
                 <input type="text" id="signUser" name="username"><br>
                 <label for="password">Password:</label><br>
                 <input type="password" id="signPass" name="password"><br><br>
-                <input type="submit" value="Submit">
+                <input type="submit" value="Submit" id="signSubmit">
             </form> 
         </div>
-      
       </div>
-    <script>
-        var signModal = document.getElementById("logModal");
 
-        var signBtn = document.getElementById("logBtn");
-
-        var span = document.getElementsByClassName("close")[0];
-
-        signBtn.onclick = function() {
-            logModal.style.display = "block";
-        }
-
-        span.onclick = function() {
-            logModal.style.display = "none";
-        }
-
-        window.onclick = function(event) {
-        if (event.target == logModal) {
-            logModal.style.display = "none";
-        }
-        }
-        var signModal = document.getElementById("signModal");
-
-        var signBtn = document.getElementById("signModal");
-
-        var span = document.getElementsByClassName("close")[0];
-
-        signBtn.onclick = function() {
-            signModal.style.display = "block";
-        }
-
-        span.onclick = function() {
-            signModal.style.display = "none";
-        }
-
-        window.onclick = function(event) {
-        if (event.target == logModal) {
-            signModal.style.display = "none";
-        }
-        }
-
-
-        
-    </script>
+    <script src="../public/js/modals.js"></script>
 </body>
 </html>
