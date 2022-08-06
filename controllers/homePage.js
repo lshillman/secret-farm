@@ -3,19 +3,15 @@ const { Animal, Farm, User } = require("../models");
 
 router.get("/", async (req, res) => {
   try {
-    const posts = await Farm.findAll({
+    const farmInfo = await User.findAll({
       include: [
         {
-          model: User,
-          attributes: ["name"],
-        },
-        {
-          model: Animal,
-          attributes: ["output"],
+          model: Farm,
+          include: { model: Animal },
         },
       ],
     });
-    const farm = posts.map((farm) => farm.get({ plain: true }));
+    const farm = farmInfo.map((farmUsers) => farmUsers.get({ plain: true }));
     console.log(farm);
     res.render("homepage", {
       farm,

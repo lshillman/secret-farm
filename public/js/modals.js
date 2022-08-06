@@ -17,7 +17,7 @@ window.onclick = function (event) {
     logModal.style.display = "none";
   }
 };
-
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 var signModal = document.getElementById("signModal");
 
 var signBtn = document.getElementById("signBtn");
