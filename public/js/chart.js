@@ -470,29 +470,24 @@ const animals= [
         "output": "egg"
     }
 ];
+// this animals array is a sample in practice will recieve the json response 
 function makeTheChart(animals){ 
+
 let animalcounterORG = {};
 let animalcounterManu = {};
-
 animals.forEach(animal => {
     for(let key in animal){
-        if(key ==='type'){
-            
+        if(key ==='type'){     
             if(!(animal[key] in animalcounterManu)){
                 animalcounterManu[animal[key]] = (animal.food_manufactured *1);
                 animalcounterORG[animal[key]] = (animal.food_organic *1);
-     
-                
             }else{
                 animalcounterManu[animal[key]] +=(animal.food_manufactured*1);
                 animalcounterORG[animal[key]] += (animal.food_organic *1);
             }
         }
-        
     }
 });
-
-
 const ctx = document.getElementById('notAnimal').getContext('2d');
 let titleArray = [];
 let manuValues = [];
@@ -500,12 +495,9 @@ let orgValues = [];
 for(let key in animalcounterORG){
     titleArray.push(key);
     orgValues.push(animalcounterORG[key])
-
 }
 for(let key in animalcounterManu){
-  
     manuValues.push(animalcounterManu[key])
-
 }
 const animalChart = new Chart(ctx,{
     type: 'bar',
@@ -536,8 +528,6 @@ const animalChart = new Chart(ctx,{
           }
         ]  
     }
- 
-   
 })
 }
 // can add this configuration below to have a bar graph of costs of each then add a line graph of revenue per month
