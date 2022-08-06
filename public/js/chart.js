@@ -1,6 +1,46 @@
 const animals= [
     {
         "id": 1,
+        "type": "horse",
+        "name": "Cowboy",
+        "breed": "race",
+        "farm_id": 1,
+        "food_organic": "350.00",
+        "food_manufactured": "200.00",
+        
+    },
+    {
+        "id": 1,
+        "type": "horse",
+        "name": "Cowboy",
+        "breed": "race",
+        "farm_id": 1,
+        "food_organic": "350.00",
+        "food_manufactured": "200.00",
+        
+    },
+    {
+        "id": 1,
+        "type": "horse",
+        "name": "Cowboy",
+        "breed": "race",
+        "farm_id": 1,
+        "food_organic": "350.00",
+        "food_manufactured": "200.00",
+        
+    },
+    {
+        "id": 1,
+        "type": "cow",
+        "name": "Cowboy",
+        "breed": "Highland Cattle",
+        "farm_id": 1,
+        "food_organic": "150.00",
+        "food_manufactured": "100.00",
+        "output": "meat"
+    },
+    {
+        "id": 1,
         "type": "cow",
         "name": "Cowboy",
         "breed": "Highland Cattle",
@@ -471,6 +511,7 @@ const animals= [
     }
 ];
 // this animals array is a sample in practice will recieve the json response 
+// to size chart we need to resize container
 function makeTheChart(animals){ 
 
 let animalcounterORG = {};
