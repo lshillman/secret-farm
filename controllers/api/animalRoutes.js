@@ -31,6 +31,7 @@ router.get('/:id', async (req, res) => {
 });
 
 // create an animal
+// may need to change where farm id comes from
 router.post('/', async (req, res) => {
     try {
       const dbAnimalData = await Animal.create({

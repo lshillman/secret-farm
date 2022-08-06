@@ -92,6 +92,7 @@ router.post('/logout', (req,res) =>{
         res.status(404).end();
     }
 });
+// Get all farms for given User ------------------------------------------------------
 router.get('/:id/farms', async(req,res) => {
     try{
         const allUser = await User.findByPk(
