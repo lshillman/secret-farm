@@ -3,7 +3,7 @@ const homeRoutes = require("./homePage");
 const profileRoutes = require("./profile");
 const apiRoutes = require("./api");
 
-router.use("/home", homeRoutes);
+router.use("/", homeRoutes);
 router.use("/profile", profileRoutes);
 /* router.use("/farm", farmRoutes); */
 router.use("/api", apiRoutes);
