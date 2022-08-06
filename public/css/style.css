@@ -176,7 +176,7 @@ aside ul li a:hover {
 }
 
 .modal {
-    display: none; /* Hidden by default */
+    display: block; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     padding-top: 100px; /* Location of the box */
@@ -196,6 +196,7 @@ aside ul li a:hover {
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    max-width: 500px;
   }
   
   /* The Close Button */
