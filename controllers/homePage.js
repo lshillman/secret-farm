@@ -16,9 +16,8 @@ router.get('/', async (req,res) => {
             }
         ],
         });
-        const Farm = posts.map((post) =>post.get({plain: true}));
+
         res.render('homepage',{
-            Farm,
             loggedIn: req.session.loggedIn
         });
     }catch(err){
