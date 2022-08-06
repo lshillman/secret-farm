@@ -31,17 +31,7 @@ header {
   min-width: 300px;
 }
 
-@media (max-width: 530px) {
-  #siteHomeLink {
-    min-width:auto;
-    width: 150px;
-    margin-top:1.5rem;
-    }
 
-    nav {
-      font-size: 1rem;
-    }
-}
 
 .hero {
   background-image: url('../assets/farm_bg.png');
@@ -122,12 +112,13 @@ aside ul li a:hover {
 
 .animalLink {
   text-decoration: none;
-  margin-top:2rem;
+  /* margin-top:2rem; */
 }
 
 .animal {
   padding:2rem;
   display:flex;
+  flex-direction: column;
   gap:1rem;
 }
 
@@ -136,7 +127,7 @@ aside ul li a:hover {
 }
 
 .animal img {
-  height: 100px;
+  width: 100%;
 }
 
 .gallery {
@@ -184,3 +175,19 @@ aside ul li a:hover {
     cursor: pointer;
   }
   
+
+
+  @media (max-width: 550px) {
+    #siteHomeLink {
+      min-width:auto;
+      width: 150px;
+      margin-top:1.5rem;
+      }
+  
+      nav {
+        font-size: 1rem;
+      }
+      aside {
+        min-height:auto;
+      }
+  }
