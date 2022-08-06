@@ -116,6 +116,14 @@ aside ul li a:hover {
   max-width: 100%;
 }
 
+#farmInfo {
+  margin-top: 3rem;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid #dedede;
+}
+
 #chartContainer {
   margin-top: 3rem;
   height: 350px;
@@ -126,9 +134,16 @@ aside ul li a:hover {
   border: 1px solid #dedede;
 }
 
+#animalContainer {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+}
+
 .animalLink {
   text-decoration: none;
   margin-top:2rem;
+  margin-left:0;
 }
 
 .animal {
