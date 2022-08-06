@@ -1,75 +1,3 @@
-const ctx = document.getElementById('myChart').getContext('2d');
-
-// When you click on a farm you will recieve an array of all animals in the form of
-// req.body.animals or something similar
-
-//potentisl info recived to calculate data with 
-
-// {
-// 	"id": 1,
-// 	"name": "Lukes Farm",
-// 	"description": "Has chickens and cats",
-// 	"user_id": 4,
-// 	"animals": [
-// 		{
-// 			"id": 1,
-// 			"type": "cow",
-// 			"name": "Cowboy",
-// 			"breed": "Highland Cattle",
-// 			"farm_id": 1,
-// 			"food_organic": "150.00",
-// 			"food_manufactured": "100.00",
-// 			"output": "meat"
-// 		},
-// 		{
-// 			"id": 5,
-// 			"type": "cow",
-// 			"name": "Sky",
-// 			"breed": "Milk cow",
-// 			"farm_id": 1,
-// 			"food_organic": "150.00",
-// 			"food_manufactured": "100.00",
-// 			"output": "milk"
-// 		},
-
-    // 			"id": 5,
-    // 			"type": "chicken",
-    // 			"name": "Sky",
-    // 			"breed": "egg chicken",
-    // 			"farm_id": 1,
-    // 			"food_organic": "50.00",
-    // 			"food_manufactured": "30.00",
-    // 			"output": "eggs"
-    // 		}
-// 	]
-// }
-// need to take this and graph Animals and cost
-// Would be nice to total cows and chickens and display the graph of total cost per type of animal
-//on click of farm name needs to load this chart and list animals
-// on click redirects to specific farm page user/farm/:id
-// this route fetches to api below
-// so hit route api/farms/:id/animal
-// 
-
-
-
-// resize will have chart fit to container
-// mychart.resize()
-
-// function addData(chart, label, data){
-//     chart.data.labels.push(label);
-//     chart.data.datasets.array.forEach(dataset => {
-//         dataset.data.push(data)
-//     });
-//     chart.update();
-// };
-// function removeData(chart) {
-//     chart.data.labels.pop();
-//     chart.data.datasets.forEach((dataset) => {
-//         dataset.data.pop();
-//     });
-//     chart.update();
-// };
 const animals= [
     {
         "id": 1,
@@ -142,11 +70,9 @@ const animals= [
         "output": "egg"
     }
 ];
-// var organicFood =[];
-// var manuFood = [];
-// var animalArr =[];
-var animalcounterORG = {};
-var animalcounterManu = {};
+
+let animalcounterORG = {};
+let animalcounterManu = {};
 
 animals.forEach(animal => {
     for(let key in animal){
@@ -165,5 +91,35 @@ animals.forEach(animal => {
         
     }
 });
-console.log(animalcounterORG)
-console.log(animalcounterManu)
+
+
+const ctx = document.getElementById('notAnimal').getContext('2d');
+let titleArray = [];
+let manuValues = [];
+let orgValues = [];
+for(let key in animalcounterORG){
+    titleArray.push(key);
+    orgValues.push(animalcounterORG[key])
+
+}
+for(let key in animalcounterManu){
+  
+    manuValues.push(animalcounterManu[key])
+
+}
+const animalChart = new Chart(ctx,{
+    type: 'bar',
+    data: {
+        labels: titleArray,
+        datasets: 
+        [{
+            label: 'Organic Food Cost',
+            data: orgValues
+          },{
+            label: 'Manufactured Food Cost',
+            data: manuValues
+          }
+        ]
+    },
+   
+})
