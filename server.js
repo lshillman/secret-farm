@@ -3,7 +3,7 @@ const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
-/* const calculator = require('./utils/calculator'); */
+const calculator = require('./utils/calculator');
 const routes = require('./controllers');
 const sequelize = require('./config/connection');
 const app = express();
@@ -21,9 +21,9 @@ const sess = {
 }
 
 app.use(session(sess));
-/* const helpHandlebars = exphbs.create({calculator}); */
+const helpHandlebars = exphbs.create({calculator}); 
 
-app.engine('handlebars',exphbs.engine);
+app.engine('handlebars',helpHandlebars.engine);
 app.set('view engine', 'handlebars');
 
 app.use(express.json());
