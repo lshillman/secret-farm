@@ -45,6 +45,52 @@ const animalData = [
     food_manufactured: 100,
     output: "milk",
   },
+  {
+    farm_id: 1,
+    name: "doby",
+    type: "cow",
+    breed: "Milk cow",
+    food_organic: 150,
+    food_manufactured: 100,
+    output: "milk",
+  },
+  {
+    farm_id: 1,
+    name: "velma",
+    type: "cow",
+    breed: "Milk cow",
+    food_organic: 150,
+    food_manufactured: 100,
+    output: "milk",
+  },
+  {
+    farm_id: 1,
+    name: "raisin",
+    type: "chicken",
+    breed: "egg chicken",
+    food_organic: 50,
+    food_manufactured: 20,
+    output: "egg",
+  },
+  {
+    farm_id: 1,
+    name: "grape",
+    type: "chicken",
+    breed: "egg chicken",
+    food_organic: 50,
+    food_manufactured: 20,
+    output: "egg",
+  },
+  {
+    farm_id: 1,
+    name: "peel",
+    type: "cow",
+    breed: "egg chicken",
+    food_organic: 50,
+    food_manufactured: 20,
+    output: "egg",
+  },
+  
 ];
 
 const animalSeeds = () => Animal.bulkCreate(animalData);
