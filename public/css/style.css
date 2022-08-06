@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: darkgrey;
+  background-color: #fafafa;
 }
 
 header {
@@ -96,13 +96,47 @@ nav a:hover {
 
 
 aside {
-  display: flex;
-  flex-flow: column wrap;
-  width: fit-content;
-  margin-top: 30px;
-  border: 5px black solid;
-  border-radius: 10px;
+  margin-top: 3rem;
+  background-color: lightgreen;
+  min-height: calc(100vh - 100px);
+}
 
+aside ul {
+  list-style: none;
+}
+
+aside ul li a {
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+}
+
+aside ul li a:hover {
+  background-color: #ccc;
+}
+
+#chartContainer {
+  margin-top: 3rem;
+  height: 350px;
+}
+
+.animalLink {
+  text-decoration: none;
+  margin-top:2rem;
+}
+
+.animal {
+  padding:2rem;
+  display:flex;
+  gap:1rem;
+}
+
+.animal ul {
+  list-style: none;
+}
+
+.animal img {
+  height: 100px;
 }
 
 .gallery {
