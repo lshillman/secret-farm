@@ -52,7 +52,7 @@ router.put('/:id', async (req, res) => {
       const dbFarmData = await Farm.update(
         {
             name: req.body.name,
-            desscription: req.body.breed,
+            description: req.body.description,
         },
         {
             where: {

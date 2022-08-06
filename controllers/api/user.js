@@ -78,6 +78,7 @@ router.post('/login', async (req,res) => {
             req.session.userId = cleanedUser.id,
             res.status(200).json(userData);
         });
+        console.log(req.session)
     }catch(err){
         res.status(500).json(err);
     }

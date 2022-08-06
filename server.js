@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 3001;
 
 const sess = {
     secret: 'super secret secret',
-    cookie: {},
+    cookie: {maxAge: 1800000},
     resave: false,
     saveUninitialized: true,
     store: new SequelizeStore({
@@ -21,9 +21,9 @@ const sess = {
 }
 
 app.use(session(sess));
-const helpHandlebars = exphbs.create({calculator});
+const helpHandlebars = exphbs.create({calculator}); 
 
-app.engine('handlebars', helpHandlebars.engine);
+app.engine('handlebars',helpHandlebars.engine);
 app.set('view engine', 'handlebars');
 
 app.use(express.json());

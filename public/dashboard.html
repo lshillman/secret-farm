@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/skeleton.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    <title>OnlyFarms</title>
+</head>
+<body>
+
+  <header>
+
+        <div id="headerContainer">
+            <a href="/" id="siteHomeLink"><img src="./assets/onlyfarms-logo.svg" id="sitelogo"></a>
+            <nav>
+                <a href="/login">Sign up</a>
+                <!-- {{#if loggedIn}} -->
+                <!-- <button id="logout">Logout</button> -->
+                <!-- {{else}} -->
+                <a href="/login">Login</a>
+                <!-- {{/if}} -->
+            </nav>
+        </div>
+
+  </header>
+
+  <main>
+    <div class="container">
+        <aside class="three columns">
+            <button class="button" id="addFarmBtn">Add New Farm</button>
+            <ul>
+                <li>
+                    <a href="#">Farm 1</a>
+                </li>
+                <li>
+                    <a href="#">Farm 2</a>
+                </li>
+                <li>
+                    <a href="#">Farm 3</a>
+                </li>
+                <li>
+                    <a href="#">Farm 4</a>
+                </li>
+            </ul>
+        </aside>
+
+        <div class="nine columns" id="farmInfo">
+            <h1>Luke's Farm</h1>
+            <p>At Luke's Farm, we do everything right. Don't like GMOs? We got your organic stuff. Love GMOs? We got engineered stuff. There's always something for everybody at Luke's Farm.</p>
+        </div>
+
+        <div class="nine columns" id="chartContainer">
+            <canvas id="notAnimal" aria-label="Budget Pie Chart for each animal" role="img"></canvas>
+        </div>
+        <h2 class="nine columns">Animals</h2>
+        <div class="nine columns" id="animalContainer">
+        <a href="#" class="four columns animalLink">
+            <div class="blue animal">
+                <img src="./assets/animals/lambchop.png" class="u-pull-left">
+                <ul>
+                    <li>
+                        <strong>Name:</strong> Lambchop
+                    </li>
+                    <li>
+                        <strong>Type:</strong> Sheep
+                    </li>
+                </ul>
+            </div>
+        </a>
+        <a href="#" class="four columns animalLink">
+            <div class="blue animal">
+                <img src="./assets/animals/lambchop.png" class="u-pull-left">
+                <ul>
+                    <li>
+                        <strong>Name:</strong> Lambchop
+                    </li>
+                    <li>
+                        <strong>Type:</strong> Sheep
+                    </li>
+                </ul>
+            </div>
+        </a>
+        <a href="#" class="four columns animalLink">
+            <div class="blue animal">
+                <img src="./assets/animals/lambchop.png" class="u-pull-left">
+                <ul>
+                    <li>
+                        <strong>Name:</strong> Lambchop
+                    </li>
+                    <li>
+                        <strong>Type:</strong> Sheep
+                    </li>
+                </ul>
+            </div>
+        </a>
+
+        <a href="#" class="four columns animalLink">
+            <div class="blue animal">
+                <img src="./assets/animals/lambchop.png" class="u-pull-left">
+                <ul>
+                    <li>
+                        <strong>Name:</strong> Lambchop
+                    </li>
+                    <li>
+                        <strong>Type:</strong> Sheep
+                    </li>
+                </ul>
+            </div>
+        </a>
+        <a href="#" class="four columns animalLink">
+            <div class="blue animal">
+                <img src="./assets/animals/lambchop.png" class="u-pull-left">
+                <ul>
+                    <li>
+                        <strong>Name:</strong> Lambchop
+                    </li>
+                    <li>
+                        <strong>Type:</strong> Sheep
+                    </li>
+                </ul>
+            </div>
+        </a>
+        <a href="#" class="four columns animalLink">
+            <div class="blue animal">
+                <img src="./assets/animals/lambchop.png" class="u-pull-left">
+                <ul>
+                    <li>
+                        <strong>Name:</strong> Lambchop
+                    </li>
+                    <li>
+                        <strong>Type:</strong> Sheep
+                    </li>
+                </ul>
+            </div>
+        </a>
+        </div>
+
+
+
+        <!-- <div class="gallery">
+            {{{body}}}
+        </div> -->
+    </div>
+  </main>
+  <!-- {{#if loggedIn}} -->
+  <!-- <script src="/js/logout.js"></script> -->
+  <!-- {{/if}} -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="./js/chart.js"></script>
+</body>
+
+</html>
