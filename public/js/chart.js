@@ -68,9 +68,409 @@ const animals= [
         "food_organic": "50.00",
         "food_manufactured": "29.99",
         "output": "egg"
+    },
+    {
+        "id": 11,
+        "type": "dragons",
+        "name": "bark",
+        "breed": "fire",
+        "farm_id": 1,
+        "food_organic": "300",
+        "food_manufactured": "185",
+        "output": "fire"
+    },
+    {
+        "id": 11,
+        "type": "dragons",
+        "name": "bark",
+        "breed": "fire",
+        "farm_id": 1,
+        "food_organic": "300",
+        "food_manufactured": "185",
+        "output": "fire"
+    },,
+    {
+        "id": 11,
+        "type": "dragons",
+        "name": "bark",
+        "breed": "fire",
+        "farm_id": 1,
+        "food_organic": "300",
+        "food_manufactured": "185",
+        "output": "fire"
+    },,
+    {
+        "id": 11,
+        "type": "dragons",
+        "name": "bark",
+        "breed": "fire",
+        "farm_id": 1,
+        "food_organic": "300",
+        "food_manufactured": "185",
+        "output": "fire"
+    },,
+    {
+        "id": 11,
+        "type": "dragons",
+        "name": "bark",
+        "breed": "fire",
+        "farm_id": 1,
+        "food_organic": "300",
+        "food_manufactured": "185",
+        "output": "fire"
+    },,
+    {
+        "id": 11,
+        "type": "dragons",
+        "name": "bark",
+        "breed": "fire",
+        "farm_id": 1,
+        "food_organic": "300",
+        "food_manufactured": "185",
+        "output": "fire"
+    },,
+    {
+        "id": 11,
+        "type": "dragons",
+        "name": "bark",
+        "breed": "fire",
+        "farm_id": 1,
+        "food_organic": "300",
+        "food_manufactured": "185",
+        "output": "fire"
+    },,
+    {
+        "id": 11,
+        "type": "dragons",
+        "name": "bark",
+        "breed": "fire",
+        "farm_id": 1,
+        "food_organic": "300",
+        "food_manufactured": "185",
+        "output": "fire"
+    },,
+    {
+        "id": 7,
+        "type": "cow",
+        "name": "velma",
+        "breed": "Milk cow",
+        "farm_id": 1,
+        "food_organic": "150.00",
+        "food_manufactured": "100.00",
+        "output": "milk"
+    },
+    {
+        "id": 7,
+        "type": "cow",
+        "name": "velma",
+        "breed": "Milk cow",
+        "farm_id": 1,
+        "food_organic": "150.00",
+        "food_manufactured": "100.00",
+        "output": "milk"
+    },
+    {
+        "id": 7,
+        "type": "cow",
+        "name": "velma",
+        "breed": "Milk cow",
+        "farm_id": 1,
+        "food_organic": "150.00",
+        "food_manufactured": "100.00",
+        "output": "milk"
+    },
+    {
+        "id": 7,
+        "type": "cow",
+        "name": "velma",
+        "breed": "Milk cow",
+        "farm_id": 1,
+        "food_organic": "150.00",
+        "food_manufactured": "100.00",
+        "output": "milk"
+    },
+    {
+        "id": 7,
+        "type": "cow",
+        "name": "velma",
+        "breed": "Milk cow",
+        "farm_id": 1,
+        "food_organic": "150.00",
+        "food_manufactured": "100.00",
+        "output": "milk"
+    },
+    {
+        "id": 7,
+        "type": "cow",
+        "name": "velma",
+        "breed": "Milk cow",
+        "farm_id": 1,
+        "food_organic": "150.00",
+        "food_manufactured": "100.00",
+        "output": "milk"
+    },
+    {
+        "id": 7,
+        "type": "cow",
+        "name": "velma",
+        "breed": "Milk cow",
+        "farm_id": 1,
+        "food_organic": "150.00",
+        "food_manufactured": "100.00",
+        "output": "milk"
+    },
+    {
+        "id": 7,
+        "type": "cow",
+        "name": "velma",
+        "breed": "Milk cow",
+        "farm_id": 1,
+        "food_organic": "150.00",
+        "food_manufactured": "100.00",
+        "output": "milk"
+    },
+    {
+        "id": 7,
+        "type": "cow",
+        "name": "velma",
+        "breed": "Milk cow",
+        "farm_id": 1,
+        "food_organic": "150.00",
+        "food_manufactured": "100.00",
+        "output": "milk"
+    },
+    {
+        "id": 7,
+        "type": "cow",
+        "name": "velma",
+        "breed": "Milk cow",
+        "farm_id": 1,
+        "food_organic": "150.00",
+        "food_manufactured": "100.00",
+        "output": "milk"
+    },
+    {
+        "id": 7,
+        "type": "cow",
+        "name": "velma",
+        "breed": "Milk cow",
+        "farm_id": 1,
+        "food_organic": "150.00",
+        "food_manufactured": "100.00",
+        "output": "milk"
+    },
+    {
+        "id": 7,
+        "type": "cow",
+        "name": "velma",
+        "breed": "Milk cow",
+        "farm_id": 1,
+        "food_organic": "150.00",
+        "food_manufactured": "100.00",
+        "output": "milk"
+    },
+    {
+        "id": 7,
+        "type": "cow",
+        "name": "velma",
+        "breed": "Milk cow",
+        "farm_id": 1,
+        "food_organic": "150.00",
+        "food_manufactured": "100.00",
+        "output": "milk"
+    },
+    {
+        "id": 7,
+        "type": "cow",
+        "name": "velma",
+        "breed": "Milk cow",
+        "farm_id": 1,
+        "food_organic": "150.00",
+        "food_manufactured": "100.00",
+        "output": "milk"
+    },
+    {
+        "id": 7,
+        "type": "cow",
+        "name": "velma",
+        "breed": "Milk cow",
+        "farm_id": 1,
+        "food_organic": "150.00",
+        "food_manufactured": "100.00",
+        "output": "milk"
+    },
+    {
+        "id": 10,
+        "type": "chicken",
+        "name": "peel",
+        "breed": "egg chicken",
+        "farm_id": 1,
+        "food_organic": "50.00",
+        "food_manufactured": "29.99",
+        "output": "egg"
+    },
+    {
+        "id": 10,
+        "type": "chicken",
+        "name": "peel",
+        "breed": "egg chicken",
+        "farm_id": 1,
+        "food_organic": "50.00",
+        "food_manufactured": "29.99",
+        "output": "egg"
+    },
+    {
+        "id": 10,
+        "type": "chicken",
+        "name": "peel",
+        "breed": "egg chicken",
+        "farm_id": 1,
+        "food_organic": "50.00",
+        "food_manufactured": "29.99",
+        "output": "egg"
+    },
+    {
+        "id": 10,
+        "type": "chicken",
+        "name": "peel",
+        "breed": "egg chicken",
+        "farm_id": 1,
+        "food_organic": "50.00",
+        "food_manufactured": "29.99",
+        "output": "egg"
+    },
+    {
+        "id": 10,
+        "type": "chicken",
+        "name": "peel",
+        "breed": "egg chicken",
+        "farm_id": 1,
+        "food_organic": "50.00",
+        "food_manufactured": "29.99",
+        "output": "egg"
+    },
+    {
+        "id": 10,
+        "type": "chicken",
+        "name": "peel",
+        "breed": "egg chicken",
+        "farm_id": 1,
+        "food_organic": "50.00",
+        "food_manufactured": "29.99",
+        "output": "egg"
+    },
+    {
+        "id": 10,
+        "type": "chicken",
+        "name": "peel",
+        "breed": "egg chicken",
+        "farm_id": 1,
+        "food_organic": "50.00",
+        "food_manufactured": "29.99",
+        "output": "egg"
+    },
+    {
+        "id": 10,
+        "type": "chicken",
+        "name": "peel",
+        "breed": "egg chicken",
+        "farm_id": 1,
+        "food_organic": "50.00",
+        "food_manufactured": "29.99",
+        "output": "egg"
+    },
+    {
+        "id": 10,
+        "type": "chicken",
+        "name": "peel",
+        "breed": "egg chicken",
+        "farm_id": 1,
+        "food_organic": "50.00",
+        "food_manufactured": "29.99",
+        "output": "egg"
+    },
+    {
+        "id": 10,
+        "type": "chicken",
+        "name": "peel",
+        "breed": "egg chicken",
+        "farm_id": 1,
+        "food_organic": "50.00",
+        "food_manufactured": "29.99",
+        "output": "egg"
+    },
+    {
+        "id": 10,
+        "type": "chicken",
+        "name": "peel",
+        "breed": "egg chicken",
+        "farm_id": 1,
+        "food_organic": "50.00",
+        "food_manufactured": "29.99",
+        "output": "egg"
+    },
+    {
+        "id": 10,
+        "type": "chicken",
+        "name": "peel",
+        "breed": "egg chicken",
+        "farm_id": 1,
+        "food_organic": "50.00",
+        "food_manufactured": "29.99",
+        "output": "egg"
+    },
+    {
+        "id": 10,
+        "type": "chicken",
+        "name": "peel",
+        "breed": "egg chicken",
+        "farm_id": 1,
+        "food_organic": "50.00",
+        "food_manufactured": "29.99",
+        "output": "egg"
+    },
+    {
+        "id": 10,
+        "type": "chicken",
+        "name": "peel",
+        "breed": "egg chicken",
+        "farm_id": 1,
+        "food_organic": "50.00",
+        "food_manufactured": "29.99",
+        "output": "egg"
+    },
+    {
+        "id": 10,
+        "type": "chicken",
+        "name": "peel",
+        "breed": "egg chicken",
+        "farm_id": 1,
+        "food_organic": "50.00",
+        "food_manufactured": "29.99",
+        "output": "egg"
+    },
+    {
+        "id": 10,
+        "type": "chicken",
+        "name": "peel",
+        "breed": "egg chicken",
+        "farm_id": 1,
+        "food_organic": "50.00",
+        "food_manufactured": "29.99",
+        "output": "egg"
+    },
+    {
+        "id": 10,
+        "type": "chicken",
+        "name": "peel",
+        "breed": "egg chicken",
+        "farm_id": 1,
+        "food_organic": "500.00",
+        "food_manufactured": "29.99",
+        "output": "egg"
     }
 ];
-
+function makeTheChart(animals){ 
 let animalcounterORG = {};
 let animalcounterManu = {};
 
@@ -114,12 +514,45 @@ const animalChart = new Chart(ctx,{
         datasets: 
         [{
             label: 'Organic Food Cost',
-            data: orgValues
+            data: orgValues,
+            backgroundColor: [
+                "rgba(255, 99, 132, 0.2)",
+                "rgba(54, 162, 235, 0.2)",
+                "rgba(255, 206, 86, 0.2)",
+                "rgba(75, 192, 192, 0.2)",
+                "rgba(153, 102, 255, 0.2)",
+              ]
           },{
             label: 'Manufactured Food Cost',
-            data: manuValues
+            data: manuValues,
+            backgroundColor: [
+                "rgba(153, 102, 255, 0.2)",
+                "rgba(255, 99, 132, 0.2)",
+                "rgba(54, 162, 235, 0.2)",
+                "rgba(255, 206, 86, 0.2)",
+                "rgba(75, 192, 192, 0.2)",
+                ,
+              ]
           }
-        ]
-    },
+        ]  
+    }
+ 
    
 })
+}
+// can add this configuration below to have a bar graph of costs of each then add a line graph of revenue per month
+// to overlay the bar
+// datasets: [{
+//     type: 'bar',
+//     label: 'Bar Dataset',
+//     data: [10, 20, 30, 40],
+//     borderColor: 'rgb(255, 99, 132)',
+//     backgroundColor: 'rgba(255, 99, 132, 0.2)'
+//   }, {
+//     type: 'line',
+//     label: 'Line Dataset',
+//     data: [50, 50, 50, 50],
+//     fill: false,
+//     borderColor: 'rgb(54, 162, 235)'
+//   }]
+makeTheChart(animals);
