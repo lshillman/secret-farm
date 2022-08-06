@@ -513,7 +513,7 @@ const animals= [
 // this animals array is a sample in practice will recieve the json response 
 // to size chart we need to resize container
 function makeTheChart(animals){ 
-
+    const ctx = document.getElementById('notAnimal').getContext('2d');
 let animalcounterORG = {};
 let animalcounterManu = {};
 animals.forEach(animal => {
@@ -529,7 +529,7 @@ animals.forEach(animal => {
         }
     }
 });
-const ctx = document.getElementById('notAnimal').getContext('2d');
+
 let titleArray = [];
 let manuValues = [];
 let orgValues = [];
@@ -568,7 +568,11 @@ const animalChart = new Chart(ctx,{
               ]
           }
         ]  
-    }
+    },
+    options:{
+        responsive: true,
+        maintainAspectRatio: false
+    },
 })
 }
 // can add this configuration below to have a bar graph of costs of each then add a line graph of revenue per month
