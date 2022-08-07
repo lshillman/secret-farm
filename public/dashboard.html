@@ -138,19 +138,31 @@
             </div>
         </a>
         </div>
-
-
-
-        <!-- <div class="gallery">
-            {{{body}}}
-        </div> -->
     </div>
+
+    <div class="modal" id="farmModal">
+        <div class="modal-content">
+            <span class="close" id="farmClose">&times;</span>
+            <div class="farm-grab">
+                <h2>Enter Farm Info</h2>
+                <form id="form" class="farm-form">
+                    <label for="farm-name">Farm Name</label>
+                    <input id="farm-name" class="form-input u-full-width" type="text" placeholder="Farm Name" required="true">
+                    <p id="farmNameStatus" class="hide">Farm Name must be 3 characters or longer</p>
+                    <label for="farm-description">Description of Farm</label>
+                    <textarea name="farm-description" id="farm-description" cols="45" placeholder="Farm Description" required="true"></textarea>
+                    <p id="farmCreateStatus" class="hide">Farm Description must be 3 characters or longer</p>
+                    <button class="button-primary modalBtn" id="farmSubmit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
   </main>
-  <!-- {{#if loggedIn}} -->
-  <!-- <script src="/js/logout.js"></script> -->
-  <!-- {{/if}} -->
+
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="./js/chart.js"></script>
+  <script src="./js/farmModal.js"></script>
 </body>
 
 </html>

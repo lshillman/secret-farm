@@ -222,6 +222,24 @@ aside ul li a:hover {
     color: red;
     font-weight: bold;
   }
+  
+  .hide {
+    display:none;
+  }
+
+  input:invalid {
+    background-color: ivory;
+    border: none;
+    outline: 2px solid red;
+    border-radius: 5px;
+  }
+
+  textarea:invalid {
+    background-color: ivory;
+    border: none;
+    outline: 2px solid red;
+    border-radius: 5px;
+  }
 
 
   @media (max-width: 550px) {
