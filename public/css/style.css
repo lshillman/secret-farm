@@ -189,6 +189,35 @@ aside ul li a:hover {
 }
 
 
+/* ----- ANIMAL PAGE ----- */
+
+#animalPic {
+  margin-top: 3rem;
+  width: 100%;
+  border-radius: 8px;
+}
+
+#animalInfo {
+  margin-top: 3rem;
+  padding:2rem;
+  display:flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: var(--cardbg);
+  border: 1px solid var(--grayborder);
+  border-radius: 1rem;
+}
+
+#animalInfo ul {
+  list-style: none;
+}
+
+#animalActions button {
+  display:block;
+  width:100%
+}
+
+
 /* ----- DIRECTORY PAGE ----- */
 
 #directory {
@@ -272,11 +301,6 @@ aside ul li a:hover {
     border-radius: 5px;
   }
 
-  .imgTest {
-    width: 302px;
-    height: 302px;
-  }
-
 
 /* ----- STYLE TWEAKS FOR NUMBER INPUTS ----- */
 
@@ -301,10 +325,14 @@ input[type=number] {
       }
   
       nav {
-        /* font-size: 1rem; */
+        font-size: 1.5rem;
       }
       aside {
         min-height:auto;
+      }
+
+      #animalActions {
+        width: 100%;
       }
 
       .farmDirListing {

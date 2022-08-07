@@ -30,19 +30,22 @@
     <main>
         <div class="container">
             <div class="three columns">
-                <aside>
-                    <img src="./assets/animals/lambchop.png" alt="test image" class="imgTest">
-                </aside>
+                    <img src="./assets/animals/lambchop.png" alt="test image" id="animalPic">
             </div>
             
-            <div class="nine columns">
-                <div class="twelve columns">
+            <div id="animalInfo" class="nine columns">
+                <div>
                 <h1>Sheep</h1>
-                <p>name: Lambchop</p>
-                <p>breed: not given</p>
-                <p>food(organic): $500 </p>
-                <p>food(Manufactured): $500</p>
-                <button class="button">Delete Animal</button>
+                    <ul>
+                        <li><strong>Name:</strong> <span id="nameInfo">Lambchop</span></li>
+                        <li><strong>Breed:</strong> <span id="breedInfo">not given</span></li>
+                        <li><strong>Food(organic):</strong> <span id="orgFood">$500</span></li>
+                        <li><strong>Food(Manufactured):</strong> <span id="manFood">$500</span></li>
+                    </ul>
+                </div>
+                <div id="animalActions">
+                    <button class="button-primary">Edit Animal</button>
+                    <button class="button">Delete Animal</button>
                 </div>
             </div>
         </div>
