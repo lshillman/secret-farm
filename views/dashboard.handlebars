@@ -1,22 +1,25 @@
   <div class="container">
         <aside class="three columns">
             <button class="button" id="addFarmBtn">Add New Farm</button>
-            {{#if farms}}
+            {{#if user.farms}}
             <ul>
-                {{#each farms}}
-                <li>
-                    <a href="/farms/{{farms.id}}">{{farms.name}}</a>
-                </li>
-                {{/each}}
+                {{#with user}}
+                    {{#each farms}}
+                    <li>
+                        <a href="/farms/{{this.id}}">{{this.name}}</a>
+                    </li>
+                    {{/each}}
+                {{/with}}
             </ul>
             {{else}}
 
             {{/if}}
         </aside>
-
         <div class="nine columns" id="farmInfo">
-            <h1>{{farms.name}}</h1>
-            <p>{{farms.descriptions}}</p>
+            {{#with user}}
+                <h1>{{farms.[0].[name]}}</h1>
+                <p>{{farms.[0].[description]}}</p>
+            {{/with}}
         </div>
 
         <div class="nine columns" id="chartContainer">
@@ -24,7 +27,11 @@
         </div>
         <h2 class="nine columns">Animals</h2>
         <div class="nine columns" id="animalContainer">
-            {{#each user.farms.animals as |animal|}}
-                {{>animalcard}}
-            {{/each}}
+            {{#with user}}
+                {{!-- {{#with farms}} --}}
+                    {{#each farms.animals as |animals|}}
+                        {{>animalcard}}
+                    {{/each}}
+                {{!-- {{/with}} --}}
+            {{/with}}
         </div>
