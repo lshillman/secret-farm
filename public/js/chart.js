@@ -510,8 +510,12 @@ const animals= [
         "output": "egg"
     }
 ];
-// this animals array is a sample in practice will recieve the json response 
-// to size chart we need to resize container
+
+async function  getChartData(){
+       const response = await fetch(`/api/user/${req.session.userId}/farms`);
+       console.log(response.json())
+}
+getChartData();
 function makeTheChart(animals){ 
     const ctx = document.getElementById('notAnimal').getContext('2d');
 let animalcounterORG = {};
@@ -575,5 +579,3 @@ const animalChart = new Chart(ctx,{
     },
 })
 }
-
-makeTheChart(animals);
