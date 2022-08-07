@@ -239,18 +239,16 @@ aside ul li a:hover {
     display:none;
   }
 
-  input:invalid {
+  .inputField:invalid {
     border: none;
     outline: 2px solid rgba(255, 0, 0, 0.75);
     border-radius: 5px;
   }
 
-  textarea:invalid {
-    border: none;
-    outline: 2px solid rgba(255, 0, 0, 0.75);
-    border-radius: 5px;
+  .imgTest {
+    width: 302px;
+    height: 302px;
   }
-
 
   /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,

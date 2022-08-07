@@ -148,7 +148,7 @@
             <span class="close" id="farmClose">&times;</span>
             <div class="farm-grab">
                 <h2>Enter Farm Info</h2>
-                <form id="form" class="farm-form">
+                <form id="farm-form">
                     <label for="farm-name">Farm Name</label>
                     <input id="farm-name" class="form-input u-full-width" type="text" placeholder="Farm Name" required="true">
                     <p id="farmNameStatus" class="hide">Farm Name must be 3 characters or longer</p>
@@ -158,6 +158,36 @@
                     <button class="button-primary modalBtn" id="farmSubmit">Submit</button>
                 </form>
             </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="animalModal">
+    <div class="modal-content">
+        <span class="close" id="animalClose">&times;</span>
+            <div class="animal-area">
+            <h2>Enter Animal Info</h2>
+            <form id="animal-form">
+                <label for="animal-name">Animal Name (Optional)</label>
+                <input id="animal-name" class="form-input u-full-width" type="text" placeholder="Animal Name" >
+
+                <label for="animal-breed">Animal Breed (Optional)</label>
+                <input id="animal-breed" class="form-input u-full-width" type="text" placeholder="Animal Breed">
+                
+                <label for="animal-product">Animal Product (Optional)</label>
+                <input id="animal-product" class="form-input u-full-width" type="text" placeholder="Animal Product">
+
+                <label for="animal-type">Animal Type (Required)</label>
+                <input id="animal-type" class="form-input u-full-width" type="text" placeholder="Animal Type" required="true">
+
+                <label for="organic-cost">Organic Cost (Required)</label>
+                <input id="organic-cost" class="form-input u-full-width" type="number" placeholder="$$$" required="true">
+
+                <label for="manufactured-cost">Manufactured Cost (Required)</label>
+                <input id="manufactured-cost" class="form-input u-full-width" type="number" placeholder="$$$" required="true">
+
+                <button class="button-primary modalBtn" id="animalSubmit">Submit</button>
+            </form>
         </div>
     </div>
 </div>

@@ -1,19 +1,20 @@
-<section class="animals">
-    <h1 class="animal-name">{{animal.type}}</h1>
-    <img class="animal-image" src="">
-        <div class="food-options">
-            <div class="organic-food">
-                <h2>Organic Food-</h2>
-                <div class="organic-price">
-                    {{animal.food_organic}}
-                </div>
-            </div>
-            <div class="manufactured-food">
-                <h2>Manufactured Food-</h2>
-                <div class="manufactured-price">
-                    {{animal.food_manufactured}}
-                </div>
+<main>
+    <div class="container">
+        <div class="three columns">
+            <aside>
+                <img src="./assets/animals/lambchop.png" alt="test image" class="imgTest">
+            </aside>
+        </div>
+        
+        <div class="nine columns">
+            <div class="twelve columns">
+            <h1>{{animal.type}}</h1>
+            <p>Name: {{animal.name}}</p>
+            <p>Breed: {{animal.breed}}</p>
+            <p>Food (Organic): ${{animal.organic}} </p>
+            <p>Food (Manufactured): ${{animal.manufactured}}</p>
+            <button class="button">Delete Animal</button>
             </div>
         </div>
-
-</section>
+    </div>
+</main>
