@@ -575,19 +575,5 @@ const animalChart = new Chart(ctx,{
     },
 })
 }
-// can add this configuration below to have a bar graph of costs of each then add a line graph of revenue per month
-// to overlay the bar
-// datasets: [{
-//     type: 'bar',
-//     label: 'Bar Dataset',
-//     data: [10, 20, 30, 40],
-//     borderColor: 'rgb(255, 99, 132)',
-//     backgroundColor: 'rgba(255, 99, 132, 0.2)'
-//   }, {
-//     type: 'line',
-//     label: 'Line Dataset',
-//     data: [50, 50, 50, 50],
-//     fill: false,
-//     borderColor: 'rgb(54, 162, 235)'
-//   }]
+
 makeTheChart(animals);
