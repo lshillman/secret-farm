@@ -47,17 +47,20 @@
                 </li>
             </ul>
         </aside>
-
-        <div class="nine columns" id="farmInfo">
+        <div class="nine columns">
+        <div class="twelve columns" id="farmInfo">
             <h1>Luke's Farm</h1>
             <p>At Luke's Farm, we do everything right. Don't like GMOs? We got your organic stuff. Love GMOs? We got engineered stuff. There's always something for everybody at Luke's Farm.</p>
         </div>
 
-        <div class="nine columns" id="chartContainer">
-            <canvas id="notAnimal" aria-label="Budget Pie Chart for each animal" role="img"></canvas>
+        <div class="twelve columns" id="chartContainer">
+            <canvas id="notAnimal" aria-label="Budget chart for each animal" role="img"></canvas>
         </div>
-        <h2 class="nine columns">Animals</h2>
-        <div class="nine columns" id="animalContainer">
+        <div id="animalHeader" class="twelve columns">
+            <h2>Animals</h2><button id="addAnimalBtn" class="button-primary">Add animal</button>
+        </div>
+        
+        <div class="twelve columns" id="animalContainer">
         <a href="#" class="four columns animalLink">
             <div class="blue animal">
                 <img src="./assets/animals/lambchop.png" class="u-pull-left">
@@ -157,7 +160,7 @@
             </div>
         </div>
     </div>
-    
+</div>
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
