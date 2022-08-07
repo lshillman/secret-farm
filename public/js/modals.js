@@ -4,6 +4,8 @@ const logBtn = document.getElementById("logBtn");
 
 const logSpan = document.getElementById("logClose");
 
+const loginStatus = document.getElementById("loginStatus");
+
 logBtn.onclick = function () {
   logModal.style.display = "block";
 };
@@ -23,6 +25,8 @@ const signModal = document.getElementById("signModal");
 const signBtn = document.getElementById("signBtn");
 
 const signSpan = document.getElementById("signClose");
+
+const signupStatus = document.getElementById("signupStatus");
 
 signBtn.onclick = function () {
   signModal.style.display = "block";
@@ -53,7 +57,8 @@ const loginFormHandler = async (event) => {
     if (response.ok) {
       document.location.replace("/");
     } else {
-      alert("Failed to log in.");
+      loginStatus.textContent = "Failed to log in.";
+      return;
     }
   }
 };
@@ -63,16 +68,13 @@ const signupFormHandler = async (event) => {
 
   const name = document.querySelector("#username-signup").value.trim();
   const password = document.querySelector("#password-signup").value.trim();
-  //merge test?
+
   const pass1 = document.querySelector("#password-signup").value.trim();
   const pass2 = document.querySelector("#password-signup-conf").value.trim();
 
-  if (pass2 === pass1) {
-    console.log("password correct");
-    alert("Account Created Successfully!");
-  } else {
+  if (pass2 !== pass1) {
     console.log("Password Incorrect");
-    alert("Password does not match");
+    signupStatus.textContent = "Password does not match";
     return;
   }
 
@@ -86,15 +88,16 @@ const signupFormHandler = async (event) => {
     if (response.ok) {
       document.location.replace("/");
     } else {
-      alert("Failed to sign up.");
+      signupStatus.textContent = "Error Signing up!";
+      return;
     }
   }
 };
 
 document
-  .querySelector(".login-form")
+  .querySelector("#login-form")
   .addEventListener("submit", loginFormHandler);
 
 document
-  .querySelector(".signup-form")
+  .querySelector("#signup-form")
   .addEventListener("submit", signupFormHandler);

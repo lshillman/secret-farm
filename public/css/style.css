@@ -218,6 +218,11 @@ aside ul li a:hover {
     display:block;
   }
 
+  .passResponse {
+    color: red;
+    font-weight: bold;
+  }
+
 
   @media (max-width: 550px) {
     #siteHomeLink {
