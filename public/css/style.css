@@ -228,16 +228,14 @@ aside ul li a:hover {
   }
 
   input:invalid {
-    background-color: ivory;
     border: none;
-    outline: 2px solid red;
+    outline: 2px solid rgba(255, 0, 0, 0.75);
     border-radius: 5px;
   }
 
   textarea:invalid {
-    background-color: ivory;
     border: none;
-    outline: 2px solid red;
+    outline: 2px solid rgba(255, 0, 0, 0.75);
     border-radius: 5px;
   }
 
