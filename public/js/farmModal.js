@@ -55,23 +55,27 @@ window.onclick = function (event) {
 
 const animalFormHandler = async (event) => {
   event.preventDefault();
-  const animalName = document.getElementById("animal-name").value;
+  const animalName = document.getElementById("animal-name").value.trim();
   const animalNameEl = document.getElementById("animal-name");
 
-  const animalBreed = document.getElementById("animal-breed").value;
+  const animalBreed = document.getElementById("animal-breed").value.trim();
   const animalBreedEl = document.getElementById("animal-breed");
 
-  const animalType = document.getElementById("animal-type").value;
+  const animalProduct = document.getElementById("animal-product").value.trim();
+  const animalProductEl = document.getElementById("animal-product");
+
+  const animalType = document.getElementById("animal-type").value.trim();
   const animalTypeEl = document.getElementById("animal-type");
 
-  const organicCost = document.getElementById("organic-cost").value;
+  const organicCost = document.getElementById("organic-cost").value.trim();
   const organicCostEl = document.getElementById("organic-cost");
 
-  const manCost = document.getElementById("manufactured-cost").value;
+  const manCost = document.getElementById("manufactured-cost").value.trim();
   const manCostEl = document.getElementById("manufactured-cost");
 
   console.log(animalName);
   console.log(animalBreed);
+  console.log(animalProduct);
   console.log(animalType);
   console.log(organicCost);
   console.log(manCost);
