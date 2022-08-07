@@ -67,12 +67,12 @@ const signupFormHandler = async (event) => {
   const pass1 = document.querySelector("#password-signup").value.trim();
   const pass2 = document.querySelector("#password-signup-conf").value.trim();
 
-  if (pass1 === pass2) {
+  if (pass2 === pass1) {
     console.log("password correct");
     alert("Account Created Successfully!");
   } else {
     console.log("Password Incorrect");
-    alert("Account not created :(");
+    alert("Password does not match");
     return;
   }
 
