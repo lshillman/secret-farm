@@ -510,8 +510,12 @@ const animals= [
         "output": "egg"
     }
 ];
-// this animals array is a sample in practice will recieve the json response 
-// to size chart we need to resize container
+
+async function  getChartData(){
+       const response = await fetch(`/api/user/${req.session.userId}/farms`);
+       console.log(response.json())
+}
+getChartData();
 function makeTheChart(animals){ 
     const ctx = document.getElementById('notAnimal').getContext('2d');
 let animalcounterORG = {};
@@ -575,19 +579,3 @@ const animalChart = new Chart(ctx,{
     },
 })
 }
-// can add this configuration below to have a bar graph of costs of each then add a line graph of revenue per month
-// to overlay the bar
-// datasets: [{
-//     type: 'bar',
-//     label: 'Bar Dataset',
-//     data: [10, 20, 30, 40],
-//     borderColor: 'rgb(255, 99, 132)',
-//     backgroundColor: 'rgba(255, 99, 132, 0.2)'
-//   }, {
-//     type: 'line',
-//     label: 'Line Dataset',
-//     data: [50, 50, 50, 50],
-//     fill: false,
-//     borderColor: 'rgb(54, 162, 235)'
-//   }]
-makeTheChart(animals);

@@ -19,6 +19,3 @@ const calculator = (unit, quanity, monthlyCost) => {
     }
     console.log(endBudget)
 }
-calculator('month' ,22, 275)
-calculator('day' ,679, 200)
-calculator('year' ,8, 275)

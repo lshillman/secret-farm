@@ -19,6 +19,9 @@
   },
   "homepage": "https://github.com/lshillman/secret-farm#readme",
   "dependencies": {
+    "autocomplete": "^0.0.1",
+    "autocompleter": "^6.1.3",
+    "axios": "^0.27.2",
     "bcrypt": "^5.0.1",
     "chart.js": "^3.9.1",
     "connect-session-sequelize": "^7.1.4",
