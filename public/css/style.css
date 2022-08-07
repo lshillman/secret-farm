@@ -49,6 +49,10 @@ nav a:hover {
   color: white;
 }
 
+.withGutter {
+  padding: 0 1rem;
+}
+
 /* ----- LANDING PAGE ----- */
 
 .hero {
@@ -123,7 +127,9 @@ aside ul li a:hover {
 
 #addFarmBtn {
   margin: 2rem auto 0 auto;
-  max-width: 100%;
+  width: 80%;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 #farmInfo {
