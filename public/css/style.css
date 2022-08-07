@@ -22,16 +22,11 @@ header {
   padding: 0 1rem;
 }
 
-/* #sitelogo {
-  display:inline-block;
-} */
 
 #siteHomeLink {
   height: 100%;
   min-width: 300px;
 }
-
-
 
 .hero {
   background-image: url('../assets/farm_bg.png');
@@ -65,6 +60,10 @@ header {
 h1 {
   font-size: 50px;
   padding-bottom: 10px;
+}
+
+.container > h1 {
+  margin-top:2rem;
 }
 
 nav {
@@ -180,6 +179,22 @@ aside ul li a:hover {
   width: 100%;
 }
 
+#directory {
+  display:flex;
+  flex-wrap:wrap;
+  gap:2rem;
+  justify-content: space-between;
+}
+
+.farmDirListing {
+  /* margin-top: 3rem; */
+  background-color: #fff;
+  padding: 1rem 2rem 0 2rem;
+  border-radius: 1rem;
+  border: 1px solid #dedede;
+  width:calc(50% - 6rem);
+}
+
 .gallery {
   display: flex;
   flex-flow: row wrap;
@@ -274,5 +289,9 @@ input[type=number] {
       }
       aside {
         min-height:auto;
+      }
+
+      .farmDirListing {
+        width:100%;
       }
   }
