@@ -93,6 +93,7 @@ router.post('/logout', (req,res) =>{
         res.status(404).end();
     }
 });
+// Find user all farms and animals
 router.get('/:id/farms', async(req,res) => {
     try{
         const allUser = await User.findByPk(

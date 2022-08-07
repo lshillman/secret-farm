@@ -1,0 +1,30 @@
+  <div class="container">
+        <aside class="three columns">
+            <button class="button" id="addFarmBtn">Add New Farm</button>
+            {{#if farms}}
+            <ul>
+                {{#each farms}}
+                <li>
+                    <a href="/farms/{{farms.id}}">{{farms.name}}</a>
+                </li>
+                {{/each}}
+            </ul>
+            {{else}}
+
+            {{/if}}
+        </aside>
+
+        <div class="nine columns" id="farmInfo">
+            <h1>{{farms.name}}</h1>
+            <p>{{farms.descriptions}}</p>
+        </div>
+
+        <div class="nine columns" id="chartContainer">
+            <canvas id="notAnimal" aria-label="Budget Pie Chart for each animal" role="img"></canvas>
+        </div>
+        <h2 class="nine columns">Animals</h2>
+        <div class="nine columns" id="animalContainer">
+            {{#each user.farms.animals as |animal|}}
+                {{>animalcard}}
+            {{/each}}
+        </div>
