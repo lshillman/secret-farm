@@ -28,10 +28,10 @@
         <h2 class="nine columns">Animals</h2>
         <div class="nine columns" id="animalContainer">
             {{#with user}}
-                {{!-- {{#with farms}} --}}
-                    {{#each farms.animals as |animals|}}
+                {{#each farms}}
+                    {{#each animals}}
                         {{>animalcard}}
                     {{/each}}
-                {{!-- {{/with}} --}}
+                {{/each}}
             {{/with}}
         </div>
