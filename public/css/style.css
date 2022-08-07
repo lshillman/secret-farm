@@ -245,6 +245,11 @@ aside ul li a:hover {
     border-radius: 5px;
   }
 
+  .imgTest {
+    width: 302px;
+    height: 302px;
+  }
+
   /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
