@@ -1,20 +1,22 @@
-<main>
-    <div class="container">
-        <div class="three columns">
-            <aside>
-                <img src="./assets/animals/lambchop.png" alt="test image" class="imgTest">
-            </aside>
-        </div>
-        
-        <div class="nine columns">
-            <div class="twelve columns">
-            <h1>{{animal.type}}</h1>
-            <p>Name: {{animal.name}}</p>
-            <p>Breed: {{animal.breed}}</p>
-            <p>Food (Organic): ${{animal.organic}} </p>
-            <p>Food (Manufactured): ${{animal.manufactured}}</p>
-            <button class="button">Delete Animal</button>
+
+   <div class="container withGutter">
+            <div class="three columns">
+                    <img src="./assets/animals/lambchop.png" alt="test image" id="animalPic">
+            </div>
+            
+            <div id="animalInfo" class="nine columns">
+                <div>
+                <h1>{{cleanAnimal.type}}</h1>
+                    <ul>
+                        <li><strong>Name:</strong> <span id="nameInfo">{{cleanAnimal.name}}</span></li>
+                        <li><strong>Breed:</strong> <span id="breedInfo">{{cleanAnimal.breed}}</span></li>
+                        <li><strong>Food(organic):</strong> <span id="orgFood">${{cleanAnimal.food_manufactured}}</span></li>
+                        <li><strong>Food(Manufactured):</strong> <span id="manFood">${{cleanAnimal.food_organic}}</span></li>
+                    </ul>
+                </div>
+                <div id="animalActions">
+                    <button class="button-primary">Edit Animal</button>
+                    <button class="button">Delete Animal</button>
+                </div>
             </div>
         </div>
-    </div>
-</main>
