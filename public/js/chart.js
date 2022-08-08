@@ -511,10 +511,10 @@ const animals= [
     }
 ];
 
-async function  getChartData(){
-       const response = await fetch(`/api/user/${req.session.userId}/farms`);
-       console.log(response.json())
-}
+// async function  getChartData(){
+//        const response = await fetch(`/api/user/${req.session.userId}/farms`);
+//        console.log(response.json())
+// }
 getChartData();
 function makeTheChart(animals){ 
     const ctx = document.getElementById('notAnimal').getContext('2d');
