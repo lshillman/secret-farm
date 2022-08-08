@@ -29,6 +29,27 @@ const farmFormHandler = async (event) => {
 
   const farmDesc = document.getElementById("farm-description").value.trim();
 
+  // if (animalType && organicCost && manCost) {
+  //   const response = await fetch('/api/animals', {
+  //     method: 'POST',
+  //     body: JSON.stringify({
+  //       name: animalName,
+  //       breed: animalBreed,
+  //       output: animalProduct,
+  //       type: animalType,
+  //       food_organic: organicCost,
+  //       food_manufactured: manCost
+  //     }),
+  //     headers: { 'Content-Type': 'application/json' },
+  //   });
+
+  //   if (response.ok) {
+  //     document.location.replace('/dashboard');
+  //   } else {
+  //     console.log("failed to create animal");
+  //   }
+  // }
+
   console.log(farmName);
   console.log(farmDesc);
 };
@@ -73,12 +94,26 @@ const animalFormHandler = async (event) => {
   const manCost = document.getElementById("manufactured-cost").value.trim();
   const manCostEl = document.getElementById("manufactured-cost");
 
-  console.log(animalName);
-  console.log(animalBreed);
-  console.log(animalProduct);
-  console.log(animalType);
-  console.log(organicCost);
-  console.log(manCost);
+  if (animalType && organicCost && manCost) {
+    const response = await fetch('/api/animals', {
+      method: 'POST',
+      body: JSON.stringify({
+        name: animalName,
+        breed: animalBreed,
+        output: animalProduct,
+        type: animalType,
+        food_organic: organicCost,
+        food_manufactured: manCost
+      }),
+      headers: { 'Content-Type': 'application/json' },
+    });
+
+    if (response.ok) {
+      document.location.replace('/dashboard');
+    } else {
+      console.log("failed to create animal");
+    }
+  }
 
   if (
     animalTypeEl.textContent === "" ||

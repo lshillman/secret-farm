@@ -1,6 +1,6 @@
 # Design Artifacts
 
-## (view the [main prototype](https://lshillman.github.io/secret-farm)
+## (view the [main prototype](https://lshillman.github.io/secret-farm))
 
 OnlyFarms started as an attempt to make a gardening simulator game, where you'd try to protect your garden veggies from your marauding chickens. That idea ultimately didn't work out, but we salvaged the database models we made for the game to build the current farm budgeting app.
 
