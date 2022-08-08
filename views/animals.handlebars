@@ -1,4 +1,3 @@
-
    <div class="container withGutter">
             <div class="three columns">
                     <img src="./assets/animals/lambchop.png" alt="test image" id="animalPic">
@@ -10,7 +9,7 @@
                     <ul>
                         <li><strong>Name:</strong> <span id="nameInfo">{{cleanAnimal.name}}</span></li>
                         <li><strong>Breed:</strong> <span id="breedInfo">{{cleanAnimal.breed}}</span></li>
-                        <li><strong>Food(organic):</strong> <span id="orgFood">${{cleanAnimal.food_manufactured}}</span></li>
+                        <li><strong>Food(Organic):</strong> <span id="orgFood">${{cleanAnimal.food_manufactured}}</span></li>
                         <li><strong>Food(Manufactured):</strong> <span id="manFood">${{cleanAnimal.food_organic}}</span></li>
                     </ul>
                 </div>
@@ -20,3 +19,68 @@
                 </div>
             </div>
         </div>
+
+<div class="modal" id="editModal">
+    <div class="modal-content">
+        <span class="close" id="editModal">&times;</span>
+            <div class="edit-area">
+            <h2>Create account</h2>
+            <form id="edit-form">
+                <label for="edit-type">Animal Type (Required)</label>
+                <input id="edit-type" class="form-input u-full-width" type="text" placeholder="Animal Type" value="{{cleanAnimal.type}}" required="true">
+
+                <label for="edit-name">Animal Name (Optional)</label>
+                <input id="edit-name" class="form-input u-full-width" type="text" placeholder="Animal Name" value="{{cleanAnimal.name}}">
+
+                <label for="edit-breed">Animal Breed (Optional)</label>
+                <input id="edit-breed" class="form-input u-full-width" type="text" placeholder="Animal Breed" value="{{cleanAnimal.breed}}">
+                
+                <label for="edit-product">Animal Product (Optional)</label>
+                <input id="edit-product" class="form-input u-full-width" type="text" placeholder="Animal Product" value="{{cleanAnimal.product}}">
+
+                <label for="edit-organic-cost">Organic Cost (Required)</label>
+                <input id="edit-organic-cost" class="form-input u-full-width" type="number" placeholder="$$$" value="{{cleanAnimal.food_organic}}" required="true">
+
+                <label for="edit-manufactured-cost">Manufactured Cost (Required)</label>
+                <input id="edit-manufactured-cost" class="form-input u-full-width" type="number" placeholder="$$$" value="{{cleanAnimal.food_manufactured}}" required="true">
+
+                <button class="button-primary modalBtn" id="editSubmit">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="modal" id="deleteModal">
+    <div class="modal-content">
+        <span class="close" id="deleteModal">&times;</span>
+            <div class="delete-area">
+            <h2>Delete Animal?</h2>
+            <form id="delete-form">
+                <button class="button-primary modalBtn" id="deleteDenyBtn">Cancel</button>
+                <button class="button-primary modalBtn" id="deleteConfBtn">Delete</button>
+            </form>
+        </div>
+    </div>
+</div>
+
