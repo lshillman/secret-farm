@@ -16,11 +16,15 @@ const userData = [
     {
         name: 'gregFarmer',
         password: 'password'
+    },
+    {
+        name: 'demofarmer',
+        password: 'password'
     }
 ];
 
 const createdUsers = () => User.bulkCreate(userData, {
     individualHooks: true,
-    });
+});
 
 module.exports = createdUsers;
