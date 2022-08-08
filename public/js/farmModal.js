@@ -1,7 +1,5 @@
 const farmModal = document.getElementById("farmModal");
 
-const farmButton = document.getElementById("addFarmBtn");
-
 const farmSpan = document.getElementById("farmClose");
 
 const farmNameStatus = document.getElementById("farmNameStatus");
@@ -12,10 +10,6 @@ const farmSubmit = document.getElementById("farmSubmit");
 
 
 
-
-farmButton.onclick = function () {
-  farmModal.style.display = "block";
-};
 
 farmSpan.onclick = function () {
   farmModal.style.display = "none";
@@ -68,13 +62,10 @@ const farmFormHandler = async (event) => {
 
 const animalModal = document.getElementById("animalModal");
 
-const animalButton = document.getElementById("addAnimalBtn");
 
 const animalSpan = document.getElementById("animalClose");
 
-animalButton.onclick = function () {
-  animalModal.style.display = "block";
-};
+
 
 animalSpan.onclick = function () {
   animalModal.style.display = "none";

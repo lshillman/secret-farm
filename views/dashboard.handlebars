@@ -93,5 +93,10 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="./js/chart.js"></script>
-<script src="./js/farmModal.js"
+<!--<script src="/js/chart.js"></script>-->
+<script src="/js/farmModal.js"></script>
+ {{#if user.farms}}
+ <script src="/js/addAnimal.js"></script>
+ {{else}}
+ <script src="/js/addFarm.js"></script>
+ {{/if}}

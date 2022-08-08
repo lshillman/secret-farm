@@ -83,14 +83,15 @@ const deleteConfirmation = async (event) => {
   const delAnimalID = document.querySelector("#nameInfo").dataset.animalid;
 
   delCancel.onclick = function () {
-    location.reload();
+    deleteModal.style.display = "none";
   };
-  delConfirm.onclick = function () {
-    fetch(`/api/animals/${delAnimalID}`, {
+  delConfirm.onclick = async function () {
+    await fetch(`/api/animals/${delAnimalID}`, {
       method: "DELETE",
     });
     window.location.replace("/dashboard");
   };
+  console.log(event.target);
 };
 
 document
