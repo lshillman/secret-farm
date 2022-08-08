@@ -1,10 +1,10 @@
 const { Farm } = require('../models');
 
 const farmData = [
-/*     {
-       name: 'Lukes Farm',
-       description: 'Has chickens and cats',
-       user_id: 4
+    {
+        name: 'Lukes Farm',
+        description: 'Has chickens and cats',
+        user_id: 4
     },
     {
         name: 'Matts Farm',
@@ -20,7 +20,7 @@ const farmData = [
         name: 'Gregs farm',
         description: 'Goat and squid farm',
         user_id: 1
-    } */
+    }
 ];
 const farms = () => Farm.bulkCreate(farmData);
 

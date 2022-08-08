@@ -62,6 +62,10 @@ const deleteButton = document.getElementById("delAnimalBtn");
 
 const deleteSpan = document.getElementById("deleteModalClose");
 
+const delCancel = document.getElementById("deleteDenyBtn");
+const delConfirm = document.getElementById("deleteConfBtn");
+const delAnimalID = document.querySelector("#nameInfo").dataset.animalid;
+
 deleteButton.onclick = function () {
   deleteModal.style.display = "block";
 };
@@ -76,28 +80,22 @@ window.onclick = function (event) {
   }
 };
 
-const deleteConfirmation = async (event) => {
-  event.preventDefault();
-  const delCancel = document.getElementById("deleteDenyBtn");
-  const delConfirm = document.getElementById("deleteConfBtn");
-  const delAnimalID = document.querySelector("#nameInfo").dataset.animalid;
-
-  delCancel.onclick = function () {
-    deleteModal.style.display = "none";
-  };
-  delConfirm.onclick = async function () {
-    await fetch(`/api/animals/${delAnimalID}`, {
-      method: "DELETE",
-    });
-    window.location.replace("/dashboard");
-  };
-  console.log(event.target);
+delCancel.onclick = function () {
+  deleteModal.style.display = "none";
 };
+
+delConfirm.onclick = async function () {
+  await fetch(`/api/animals/${delAnimalID}`, {
+    method: "DELETE",
+  });
+  window.location.replace("/dashboard");
+};
+
 
 document
   .querySelector("#edit-form")
   .addEventListener("submit", updateAnimalFormHandler);
 
 document
-  .querySelector("#delete-form")
-  .addEventListener("submit", deleteConfirmation);
+  .querySelector("#confirm-delete-modal")
+  .addEventListener("click", deleteConfirmation);

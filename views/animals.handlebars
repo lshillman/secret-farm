@@ -51,17 +51,14 @@
 </div>
 
 <div class="modal" id="deleteModal">
-    <div class="modal-content">
+    <div class="modal-content" id="confirm-delete-modal">
         <span class="close" id="deleteModalClose">&times;</span>
             <div class="delete-area">
             <h2>Delete Animal?</h2>
-            <form id="delete-form">
-                <p>Are you Sure? This cannot be undone</p>
-                <div class="inlineList">
-                    <button class="button-secondary modalBtn" id="deleteDenyBtn">Cancel</button>
-                    <button class="button-primary modalBtn" id="deleteConfBtn">Delete</button>
-                </div>
-            </form>
+            <p>Are you sure?</p><br>
+            <p>This cannot be undone</p>
+            <button class="button-secondary modalBtn" id="deleteDenyBtn">Cancel</button>
+            <button class="button-primary modalBtn" id="deleteConfBtn">Delete</button>
         </div>
     </div>
 </div>
