@@ -89,13 +89,14 @@
         </div>
     </div>
 </div>
-
-<script>    
-    var chartData = {{{animals}}}
-</script>
-
+{{#if animals}}
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>    
+    var chartData = {{{animals}}}  
+</script>
 <script src="/js/chart.js"></script>
+{{/if}}
+
 <script src="/js/farmModal.js"></script>
  {{#if user.farms}}
  <script src="/js/addAnimal.js"></script>
