@@ -55,7 +55,7 @@ const loginFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace("/");
+      document.location.replace("/dashboard");
     } else {
       loginStatus.textContent = "Failed to log in.";
       return;
@@ -86,7 +86,7 @@ const signupFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace("/");
+      document.location.replace("/dashboard");
     } else {
       signupStatus.textContent = "Error Signing up!";
       return;

@@ -16,12 +16,16 @@
   <header>
 
         <div id="headerContainer">
+            {{#if logged_in}}
+            <a href="/dashboard" id="siteHomeLink"><img src="/assets/onlyfarms-logo.svg" id="sitelogo"></a>
+            {{else}}
             <a href="/" id="siteHomeLink"><img src="/assets/onlyfarms-logo.svg" id="sitelogo"></a>
+            {{/if}}
             <nav>
                
                 {{#if logged_in}}
-                <a id="logout">Logout</a>
-                <a href="/dashboard">Dashboard</a>
+                <a href="#" id="logout">Logout</a>
+                {{!-- <a href="/dashboard">Dashboard</a> --}}
                 <a href ="/farms">Directory</a>
                 {{else}}
                  <a href="#" id="signBtn">Sign up</a>
@@ -38,7 +42,7 @@
  <footer class="section green">
     <div class="container footer">
             <div class="three columns">
-                <img src="./assets/onlyfarms-logo-green.svg" alt="OnlyFarms logo">
+                <img src="/assets/onlyfarms-logo-green.svg" alt="OnlyFarms logo">
             </div>
 
             <div class="three columns">
@@ -111,6 +115,7 @@
 
 
 {{#if logged_in}}
+<script src="/js/logout.js"></script>
 {{else}}
 <script src="/js/modals.js"></script>
 {{/if}}
