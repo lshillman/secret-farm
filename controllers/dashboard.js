@@ -12,12 +12,22 @@ router.get('/', async (req,res) => {
             },);
             
             const user = posts.get({plain: true});
-            const animals =JSON.stringify(user.farms[0].animals);
+            
+        if(user.farms.length <= 0){
+            res.render('dashboard',{
+                user,
+                logged_in: req.session.logged_in
+                
+            });
+            return
+        }else{
+        const animals =JSON.stringify(user.farms[0].animals);
         res.render('dashboard',{
             user,
             animals,
             logged_in: req.session.logged_in
-        });
+        })
+    return};
     }catch(err){
         res.status(500).json(err);
         console.log(err)
