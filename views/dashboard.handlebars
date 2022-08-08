@@ -18,7 +18,7 @@
         <div class="nine columns">
         <div class="twelve columns" id="farmInfo">
             {{#with user}}
-                <h1>{{farms.[0].[name]}}</h1>
+                <h1 data-farm_id="{{farms.[0].[id]}}">{{farms.[0].[name]}}</h1>
                 <p>{{farms.[0].[description]}}</p>
             {{/with}}
         </div>
