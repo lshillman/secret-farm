@@ -10,6 +10,9 @@ const farmCreateStatus = document.getElementById("farmCreateStatus");
 
 const farmSubmit = document.getElementById("farmSubmit");
 
+
+
+
 farmButton.onclick = function () {
   farmModal.style.display = "block";
 };
@@ -17,12 +20,21 @@ farmButton.onclick = function () {
 farmSpan.onclick = function () {
   farmModal.style.display = "none";
 };
+farmSubmit.onclick = function () {
+  if(farmSubmit) {
+    farmModal.style.display = "none";
+  }
+
+
+};
 
 window.onclick = function (event) {
   if (event.target == farmModal) {
     farmModal.style.display = "none";
   }
 };
+
+
 const farmFormHandler = async (event) => {
   event.preventDefault();
   const farmName = document.getElementById("farm-name").value.trim();

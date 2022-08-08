@@ -1,6 +1,5 @@
   <div class="container withGutter">
         <aside class="three columns">
-            <button class="button" id="addFarmBtn">Add New Farm</button>
             {{#if user.farms}}
             <ul>
                 {{#with user}}
@@ -12,9 +11,11 @@
                 {{/with}}
             </ul>
             {{else}}
-
+            <button class="button" id="addFarmBtn">Add New Farm</button>
             {{/if}}
         </aside>
+
+        {{#if user.farms}}
         <div class="nine columns">
         <div class="twelve columns" id="farmInfo">
             {{#with user}}
@@ -39,7 +40,7 @@
             {{/with}}
         </div>
         </div>
-
+        {{/if}}
 
     <div class="modal" id="farmModal">
         <div class="modal-content">
