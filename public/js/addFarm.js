@@ -1,6 +1,12 @@
-const farmButton = document.getElementById("addFarmBtn");
+// const farmButton = document.getElementById("addFarmBtn");
 
 
-farmButton.onclick = function () {
+// farmButton.onclick = function () {
+//   farmModal.style.display = "block";
+// };
+
+function modalGen() {
   farmModal.style.display = "block";
 };
+
+modalGen()
