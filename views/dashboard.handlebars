@@ -1,6 +1,5 @@
   <div class="container withGutter">
         <aside class="three columns">
-            <button class="button" id="addFarmBtn">Add New Farm</button>
             {{#if user.farms}}
             <ul>
                 {{#with user}}
@@ -12,7 +11,7 @@
                 {{/with}}
             </ul>
             {{else}}
-
+            <button class="button" id="addFarmBtn">Add New Farm</button>
             {{/if}}
         </aside>
         <div class="nine columns">
