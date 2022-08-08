@@ -7,22 +7,22 @@
                 <div>
                 <h1>{{cleanAnimal.type}}</h1>
                     <ul>
-                        <li><strong>Name:</strong> <span id="nameInfo">{{cleanAnimal.name}}</span></li>
+                        <li><strong>Name:</strong> <span id="nameInfo" data-animalID="{{cleanAnimal.id}}">{{cleanAnimal.name}}</span></li>
                         <li><strong>Breed:</strong> <span id="breedInfo">{{cleanAnimal.breed}}</span></li>
                         <li><strong>Food(Organic):</strong> <span id="orgFood">${{cleanAnimal.food_manufactured}}</span></li>
                         <li><strong>Food(Manufactured):</strong> <span id="manFood">${{cleanAnimal.food_organic}}</span></li>
                     </ul>
                 </div>
                 <div id="animalActions">
-                    <button class="button-primary">Edit Animal</button>
-                    <button class="button">Delete Animal</button>
+                    <button id="editAnimalBtn" class="button-primary">Edit Animal</button>
+                    <button id="delAnimalBtn" class="button">Delete Animal</button>
                 </div>
             </div>
         </div>
 
 <div class="modal" id="editModal">
     <div class="modal-content">
-        <span class="close" id="editModal">&times;</span>
+        <span class="close" id="editModalClose">&times;</span>
             <div class="edit-area">
             <h2>Create account</h2>
             <form id="edit-form">
@@ -36,7 +36,7 @@
                 <input id="edit-breed" class="form-input u-full-width" type="text" placeholder="Animal Breed" value="{{cleanAnimal.breed}}">
                 
                 <label for="edit-product">Animal Product (Optional)</label>
-                <input id="edit-product" class="form-input u-full-width" type="text" placeholder="Animal Product" value="{{cleanAnimal.product}}">
+                <input id="edit-product" class="form-input u-full-width" type="text" placeholder="Animal Product" value="{{cleanAnimal.output}}">
 
                 <label for="edit-organic-cost">Organic Cost (Required)</label>
                 <input id="edit-organic-cost" class="form-input u-full-width" type="number" placeholder="$$$" value="{{cleanAnimal.food_organic}}" required="true">
@@ -84,3 +84,4 @@
     </div>
 </div>
 
+<script src="/js/updateModals.js"></script>

@@ -1,53 +1,51 @@
-const updateAnimalModal = document.getElementById("animalModal");
+const editAnimalModal = document.getElementById("editModal");
 
-const updateAnimalButton = document.getElementById("addAnimalBtn");
+const editAnimalButton = document.getElementById("editAnimalBtn");
 
-const updateAnimalSpan = document.getElementById("animalClose");
+const editAnimalSpan = document.getElementById("editModalClose");
 
-updateAnimalButton.onclick = function () {
-  updateAnimalModal.style.display = "block";
+editAnimalButton.onclick = function () {
+  editAnimalModal.style.display = "block";
 };
 
-updateAnimalSpan.onclick = function () {
-  updateAnimalModal.style.display = "none";
+editAnimalSpan.onclick = function () {
+  editAnimalModal.style.display = "none";
 };
 
 window.onclick = function (event) {
-  if (event.target == animalModal) {
-    updateAnimalModal.style.display = "none";
+  if (event.target == editModal) {
+    editAnimalModal.style.display = "none";
   }
 };
 
 const updateAnimalFormHandler = async (event) => {
   event.preventDefault();
+  const editAnimalID = document.querySelector("#nameInfo").dataset.animalid;
+
   const animalName = document.getElementById("edit-name").value.trim();
-  const animalNameEl = document.getElementById("edit-name");
 
   const animalBreed = document.getElementById("edit-breed").value.trim();
-  const animalBreedEl = document.getElementById("edit-breed");
 
-  const animalProduct = document.getElementById("edit-product").value.trim();
-  const animalProductEl = document.getElementById("edit-product");
+  const animalOutput = document.getElementById("edit-product").value.trim();
 
   const animalType = document.getElementById("edit-type").value.trim();
-  const animalTypeEl = document.getElementById("edit-type");
 
   const organicCost = document.getElementById("edit-organic-cost").value.trim();
-  const organicCostEl = document.getElementById("edit-organic-cost");
 
   const manCost = document.getElementById("edit-manufactured-cost").value;
-  const manCostEl = document.getElementById("edit-manufactured-cost");
 
-  const farmId = document.querySelector("h1").dataset.farm_id;
+  console.log(
+    editAnimalID +
+    "TESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTEST"
+  );
 
   if (animalType && organicCost && manCost) {
-    const response = await fetch("/api/animals", {
-      method: "POST",
+    const response = await fetch(`/api/animals/${editAnimalID}`, {
+      method: "PUT",
       body: JSON.stringify({
-        farm_id: farmId,
         name: animalName,
         breed: animalBreed,
-        output: animalProduct,
+        output: animalOutput,
         type: animalType,
         food_organic: organicCost,
         food_manufactured: manCost,
@@ -56,25 +54,13 @@ const updateAnimalFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace("/dashboard");
+      location.reload();
     } else {
       console.log("failed to create animal");
     }
   }
-
-  if (
-    animalTypeEl.textContent === "" ||
-    organicCostEl.value === "" ||
-    manCostEl.value === ""
-  ) {
-    if (!animalType) {
-      animalType.classList.add("inputField");
-    }
-    if (!organicCost) {
-      organicCost.classlist.add("inputField");
-    }
-    if (!manCost) {
-      manCost.classlist.add("inputField");
-    }
-  }
 };
+
+document
+  .querySelector("#edit-form")
+  .addEventListener("submit", updateAnimalFormHandler);
