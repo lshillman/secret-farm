@@ -94,10 +94,13 @@ const animalFormHandler = async (event) => {
   const manCost = document.getElementById("manufactured-cost").value.trim();
   const manCostEl = document.getElementById("manufactured-cost");
 
+  const farmId = document.querySelector('h1').dataset.farm_id;
+
   if (animalType && organicCost && manCost) {
     const response = await fetch('/api/animals', {
       method: 'POST',
       body: JSON.stringify({
+        farm_id: farmId,
         name: animalName,
         breed: animalBreed,
         output: animalProduct,
