@@ -53,6 +53,21 @@ nav a:hover {
   padding: 0 1rem;
 }
 
+/* ----- FOOTER ----- */
+
+.footer {
+  padding: 2rem;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer a {
+  color: #3b5d07;
+  text-decoration: none;
+}
+
 /* ----- LANDING PAGE ----- */
 
 .hero {
@@ -65,7 +80,7 @@ nav a:hover {
 
 .sectionImage {
   max-width: 70%;
-  margin: -14px auto -21px auto;
+  margin: -0 auto -7px auto;
 }
 
 .orange {
