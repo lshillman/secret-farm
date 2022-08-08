@@ -533,7 +533,7 @@ let titleArray = [];
 let manuValues = [];
 let orgValues = [];
 for(let key in animalcounterORG){
-    titleArray.push(key);
+    titleArray.push(key.toLowerCase());
     orgValues.push(animalcounterORG[key])
 }
 for(let key in animalcounterManu){
