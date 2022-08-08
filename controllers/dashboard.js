@@ -10,11 +10,12 @@ router.get('/', async (req,res) => {
                 include: {model: Farm, include:{model:Animal}},
                 attributes: {exclude: 'password'},
             },);
-      
+            
             const user = posts.get({plain: true});
-            console.log(user)
+            const animals =JSON.stringify(user.farms[0].animals);
         res.render('dashboard',{
             user,
+            animals,
             logged_in: req.session.logged_in
         });
     }catch(err){
