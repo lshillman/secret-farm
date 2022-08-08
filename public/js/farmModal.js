@@ -72,7 +72,7 @@ const animalFormHandler = async (event) => {
   const animalProduct = document.getElementById("animal-product").value.trim();
   const animalProductEl = document.getElementById("animal-product");
 
-  const animalType = document.getElementById("animal-type").value.trim();
+  const animalType = document.getElementById("animal-type").value.trim().toLowerCase();
   const animalTypeEl = document.getElementById("animal-type");
 
   const organicCost = document.getElementById("organic-cost").value.trim();
