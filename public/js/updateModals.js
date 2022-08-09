@@ -95,7 +95,3 @@ delConfirm.onclick = async function () {
 document
   .querySelector("#edit-form")
   .addEventListener("submit", updateAnimalFormHandler);
-
-// document
-//   .querySelector("#confirm-delete-modal")
-//   .addEventListener("click", deleteConfirmation);
