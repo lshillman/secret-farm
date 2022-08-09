@@ -11,9 +11,7 @@ router.get("/", async (req, res) => {
       res.status(404).json({ message: "No farms found" });
       return;
     }
-    // console.log(dbFarmData);
     const farmData = {dbFarmData: dbFarmData};
-    console.log(farmData);
     res.render('directory',{
       farmData,
       logged_in: req.session.logged_in
