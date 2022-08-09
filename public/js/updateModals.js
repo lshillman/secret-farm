@@ -96,6 +96,6 @@ document
   .querySelector("#edit-form")
   .addEventListener("submit", updateAnimalFormHandler);
 
-document
-  .querySelector("#confirm-delete-modal")
-  .addEventListener("click", deleteConfirmation);
+// document
+//   .querySelector("#confirm-delete-modal")
+//   .addEventListener("click", deleteConfirmation);
