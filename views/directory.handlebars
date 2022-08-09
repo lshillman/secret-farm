@@ -1,0 +1,19 @@
+<div class="container withGutter">
+    <h1>Farm directory</h1>
+    <div id="directory">
+        {{!-- {{#each farms}}
+        {{>farmcard}}
+        {{/each}} --}}
+        {{#if farmData}}
+            {{!-- {{#with farmData.dbFarmData}} --}}
+                {{#each farmData.dbFarmData}}
+                    {{>farmcard}}
+                {{/each}}
+            {{!-- {{/with}} --}}
+            {{else}}
+            <p>No farms :(</p>
+        {{/if}}
+
+
+    </div>
+</div>
