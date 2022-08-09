@@ -5,7 +5,9 @@
                 {{#with user}}
                     {{#each farms}}
                     <li>
-                        <a href="/farms/{{this.id}}">{{this.name}}</a>
+                        {{!-- Included for future functionality --}}
+                        {{!-- <a href="/farms/{{this.id}}">{{this.name}}</a> --}}
+                        <a href="#">{{this.name}}</a>
                     </li>
                     {{/each}}
                 {{/with}}
