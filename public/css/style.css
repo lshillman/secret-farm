@@ -180,7 +180,7 @@ aside ul li a:hover {
 #animalContainer {
   display:flex;
   flex-wrap:wrap;
-  justify-content: space-between;
+  gap: 4%;
 }
 
 #addAnimalBtn {
@@ -332,6 +332,11 @@ aside ul li a:hover {
     display:inline-block
   }
 
+
+  #deleteDenyBtn, #deleteConfBtn {
+    display: inline-block;
+    margin: 1rem;
+  }
 
 /* ----- STYLE TWEAKS FOR NUMBER INPUTS ----- */
 
